@@ -23,30 +23,33 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"lbamyr.top","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="这是属于我们两个的小站">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Libin and Meiyurou&#39;s Blog">
-<meta property="og:url" content="http://lbamyr.top/index.html">
+<meta name="description" content="引用自：杭电acm阶段之理工大版 ​       杭电ACM题目分类 ​       各大OJ题目分类 ​       hdu（杭电oj）第一页题目题解 ​      ACM牛人给的新手建议（这个也是转载的） 供留备查用 杭电acm阶段之理工大版 [671原创，欢迎转载] 以下题均为杭电acm网页的题号 首页http:&#x2F;&#x2F;acm.hdu.edu.cn&#x2F; 题库入口http:&#x2F;&#x2F;acm.hdu.e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ACM训练指导">
+<meta property="og:url" content="http://lbamyr.top/posts/1045386572.html">
 <meta property="og:site_name" content="Libin and Meiyurou&#39;s Blog">
-<meta property="og:description" content="这是属于我们两个的小站">
+<meta property="og:description" content="引用自：杭电acm阶段之理工大版 ​       杭电ACM题目分类 ​       各大OJ题目分类 ​       hdu（杭电oj）第一页题目题解 ​      ACM牛人给的新手建议（这个也是转载的） 供留备查用 杭电acm阶段之理工大版 [671原创，欢迎转载] 以下题均为杭电acm网页的题号 首页http:&#x2F;&#x2F;acm.hdu.edu.cn&#x2F; 题库入口http:&#x2F;&#x2F;acm.hdu.e">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-18T02:46:35.000Z">
+<meta property="article:modified_time" content="2021-01-19T08:29:45.666Z">
 <meta property="article:author" content="李彬">
+<meta property="article:tag" content="算法训练">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://lbamyr.top/">
+<link rel="canonical" href="http://lbamyr.top/posts/1045386572.html">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'en'
   };
 </script><script src="/lib/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/exif-js@2/exif.min.js"></script>
-<title>Libin and Meiyurou's Blog</title>
+<title>ACM训练指导 | Libin and Meiyurou's Blog</title>
   
 
 
@@ -141,7 +144,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -154,6 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%BC%80%E5%A7%8B%E5%85%A5%E9%97%A8%E5%90%A7%EF%BC%81%EF%BC%8815%E5%A4%A9%EF%BC%8C53%E9%A2%98%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">第一阶段：开始入门吧！（15天，53题）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%EF%BC%9A%E6%88%91%E8%A6%81%E5%AD%A6%E7%AE%97%E6%B3%95%EF%BC%81%EF%BC%8812%E5%A4%A9%EF%BC%8C31%E9%A2%98%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">第二阶段：我要学算法！（12天，31题）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%EF%BC%9Aacm%E6%97%A0%E5%BA%95%E6%B4%9E%E5%95%8A%EF%BC%81%EF%BC%8810%E5%A4%A9%EF%BC%8C18%E9%A2%98%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">第三阶段：acm无底洞啊！（10天，18题）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%A4%A7%E5%AE%B6%E8%87%AA%E5%AD%A6%E5%90%A7%EF%BC%81%EF%BC%88%E6%90%9EACM%E5%90%8C%E5%AD%A6%E8%AF%B7%E7%9C%8B%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">第四阶段：大家自学吧！（搞ACM同学请看）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM%E8%BF%9B%E9%98%B6"><span class="nav-number">5.0.1.</span> <span class="nav-text">ACM进阶</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%84%BF%E6%AF%8F%E4%B8%80%E4%BD%8D%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B%E7%88%B1%E5%A5%BD%E8%80%85%E6%8C%91%E6%88%98%E6%9E%81%E9%99%90%EF%BC%81"><span class="nav-number">6.</span> <span class="nav-text">　　愿每一位程序设计竞赛爱好者挑战极限！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number">7.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-2"><span class="nav-number">8.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%AD%E7%94%B5ACM%E9%A2%98%E7%9B%AE%E5%88%86%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">杭电ACM题目分类</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -210,219 +214,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://lbamyr.top/posts/1561858360.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/qianshou.png">
-      <meta itemprop="name" content="李彬">
-      <meta itemprop="description" content="这是属于我们两个的小站">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Libin and Meiyurou's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/1561858360.html" class="post-title-link" itemprop="url">第1日—Lgorithm-learning</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-18 12:57:18" itemprop="dateCreated datePublished" datetime="2021-01-18T12:57:18+08:00">2021-01-18</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 16:30:03" itemprop="dateModified" datetime="2021-01-19T16:30:03+08:00">2021-01-19</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <a id="more"></a>
-
-<h1 id="数据类型范围（int-long-long-int-用于解决数值溢出问题）"><a href="#数据类型范围（int-long-long-int-用于解决数值溢出问题）" class="headerlink" title="数据类型范围（int,long long int,用于解决数值溢出问题）"></a>数据类型范围（int,long long int,用于解决数值溢出问题）</h1><p><strong>有符号整数类型</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型名称</th>
-<th>字节数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>signed char</td>
-<td>1</td>
-<td>-2^7(-128) ~ 2^7-1(127)</td>
-</tr>
-<tr>
-<td>short int 或 short</td>
-<td>2</td>
-<td>-2^15(-32 768) ~ 2^15-1(32 767)</td>
-</tr>
-<tr>
-<td>int</td>
-<td>4</td>
-<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
-</tr>
-<tr>
-<td>long int 或 long</td>
-<td>4</td>
-<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
-</tr>
-<tr>
-<td>long long int 或 long long</td>
-<td>8</td>
-<td>-2^63(-9.2233720368548e+18) ~ 2^63-1(9.2233720368548e+18)</td>
-</tr>
-</tbody></table>
-<p><strong>无符号整数类型</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型名称</th>
-<th>字节数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>unsigned char</td>
-<td>1</td>
-<td>0 ~ 2^8-1(255)</td>
-</tr>
-<tr>
-<td>unsigned short int 或 unsigned short</td>
-<td>2</td>
-<td>0 ~ 2^16-1(65 535)</td>
-</tr>
-<tr>
-<td>unsigned int</td>
-<td>4</td>
-<td>0 ~ 2^32-1(4 294 967 295)</td>
-</tr>
-<tr>
-<td>unsigned long int 或 unsigned long</td>
-<td>4</td>
-<td>0 ~ 2^32-1(4 294 967 295)</td>
-</tr>
-<tr>
-<td>unsigned long long int 或 unsigned long long</td>
-<td>8</td>
-<td>0 ~ 2^64-1(1.844674407371e+19)</td>
-</tr>
-</tbody></table>
-<p><strong>浮点类型</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型名称</th>
-<th>字节数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>float</td>
-<td>4</td>
-<td>-/+3.4e38（精确到6位小数）</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8</td>
-<td>-/+1.7e308（精确到15位小数）</td>
-</tr>
-<tr>
-<td>long double</td>
-<td>12</td>
-<td>-/+1.19e4932（精确到18位小数）</td>
-</tr>
-</tbody></table>
-<p>原文请查看：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42856843/article/details/81989737">https://blog.csdn.net/weixin_42856843/article/details/81989737</a></p>
-<h2 id="计算时输入溢出"><a href="#计算时输入溢出" class="headerlink" title="计算时输入溢出"></a>计算时输入溢出</h2><p>例如：P22 例题2-2   3n+1 </p>
-<p>解题方法：将 int 改为 long long / long long int</p>
-<p>（注意：在使用long long int /long long 时输入应当改为%lld）</p>
-<h2 id="计算时结果溢出"><a href="#计算时结果溢出" class="headerlink" title="计算时结果溢出"></a>计算时结果溢出</h2><p>例如：P25 例题2-4   阶乘之和 </p>
-<p>解题方法：每步计算都对n进行取余，每步取模运算</p>
-<p>（要计算只包含<u>加法，减法和乘法的整数表达式除以正整数n的余数</u>，可以在每步计算之后<u>对n取余，结果不变</u>）</p>
-<h2 id="常量定义"><a href="#常量定义" class="headerlink" title="常量定义"></a>常量定义</h2><p><code>const int MOD = 1000000;  #引自P24 例题2-4</code></p>
-<p>改善程序的可读性，方便修改</p>
-<h2 id="如何迅速判断程序是否溢出"><a href="#如何迅速判断程序是否溢出" class="headerlink" title="如何迅速判断程序是否溢出"></a>如何迅速判断程序是否溢出</h2><p>通过“输入中间变量”法来验证</p>
-<h1 id="计时函数clock"><a href="#计时函数clock" class="headerlink" title="计时函数clock()"></a>计时函数clock()</h1><p>头文件：#include&lt;time.h&gt;</p>
-<p>输出：printf(“Time used = %.2f\n”,(double)clock() / CLOCKS_PER_SEC);</p>
-<p>说明：该函数返回程序目前为止运行的时间，这个时间除以常数CLOCKS_PER_SEC之后得到的值以“秒”为单位。</p>
-<h2 id="clock-计时函数"><a href="#clock-计时函数" class="headerlink" title="clock()计时函数"></a>clock()计时函数</h2><p>clock()是C/C++中的计时函数，而与其相关的数据类型是clock_t。在MSDN中，查得对clock函数定义如下：<br>clock_t clock(void) ;<br>简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）；若挂钟时间不可取，则返回-1。其中clock_t是用来保存时间的数据类型。<br>在time.h文件中，我们可以找到对clock_t()的定义：</p>
-<p>#ifndef _CLOCK_T_DEFINED</p>
-<p><em>typedef long clock_t;</em></p>
-<p><em>#define _CLOCK_T_DEFINED</em><br><em>#endif</em></p>
-<p>很明显，clock_t是一个长整形数。在time.h文件中，还定义了一个常量CLOCKS_PER_SEC，它用来表示一秒钟会有多少个时钟计时单元，其定义如下：<br>#define CLOCKS_PER_SEC ((clock_t)1000)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算一段程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">8</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"> <span class="number">9</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">10</span>     &#123;</span><br><span class="line"><span class="number">11</span>         i++;</span><br><span class="line"><span class="number">12</span>     &#125;</span><br><span class="line"><span class="number">13</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">14</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is: &quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">15</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">16</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">17</span> &#125;</span><br><span class="line"><span class="number">18</span> <span class="comment">//注释在:VC++6.0中可以用CLK_TCK替换CLOCKS_PER_SEC。</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算整个程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">12</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">13</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">14</span> &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//两个写在一起</span></span><br><span class="line"> <span class="number">1</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">4</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 5 </span>&#123;</span><br><span class="line"> <span class="number">6</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"><span class="number">12</span>     <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">13</span>     &#123;</span><br><span class="line"><span class="number">14</span>         i++;</span><br><span class="line"><span class="number">15</span>     &#125;</span><br><span class="line"><span class="number">16</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">17</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">18</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">19</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">20</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">21</span> &#125;</span><br></pre></td></tr></table></figure>
-<p>部分内容引自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/didiaodidiao/p/9194702.html">https://www.cnblogs.com/didiaodidiao/p/9194702.html</a></p>
-<h1 id="C语言输出格式要求"><a href="#C语言输出格式要求" class="headerlink" title="C语言输出格式要求"></a>C语言输出格式要求</h1><p>例如题目让输出 025，而有时候系统默认输出 25，此时我们可以用 %03d或%.3d 使 25 输出为 025。</p>
-<h1 id="算法竞赛中的输入输出框架"><a href="#算法竞赛中的输入输出框架" class="headerlink" title="算法竞赛中的输入输出框架"></a>算法竞赛中的输入输出框架</h1><p>例：P27 例题 2-5 数据统计</p>
-<p>由于整数的个数是不确定的，我们得解决这个问题。</p>
-<p>直接上代码：<code>while(scanf(&quot;%d&quot;,&amp;x) == 1)</code></p>
-<p>解释：scanf函数是有返回值的，它返回的是成功输入的变量个数，当输入结束时，scanf函数无法再次读取x，将返回0.</p>
-<p>但是细心的小伙伴运行程序后肯定会发现按下“Enter”键后未显示结果。并不是程序运行太慢，其实程序是在等待输入。scanf函数的输入格式：空格，TAB和回车符都是无关紧要的，所以按下Ente键并不意味着输入的结束。那么我们该如何告诉程序输入结束了呢？</p>
-<p>提示：在Windows下，输入完毕后先按下Enter键，再按Ctrl+Z键，最后再按Enter键，即可结束输入。在Linux下，输入完毕后按Ctrl+D键即可结束输入。</p>
-<h1 id="文件输入输出讨论"><a href="#文件输入输出讨论" class="headerlink" title="文件输入输出讨论"></a>文件输入输出讨论</h1><p>​       相信在上一节我提到的scanf函数的使用方式后，大家也会发现每次调试程序的时候并不方便，尤其是上面的例题中程序值是溢出的，那也就意味着我们会进行多次的调试。</p>
-<p>​       Good means：用文件——把输入数据保存在文件中，输出数据也保存在文件中。这样，事先把输入的数据保存在命令行中，就不必每次重新输入了；</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>最简单的方法是使用输入输出重定向，只需在main函数的入口处加入以下两条语句：</p>
-<p><code>freopen(&quot;input.txt&quot;,&quot;r&quot;,stdin);</code></p>
-<p><code>freopen(&quot;output.txt&quot;,&quot;w&quot;,stdout);</code></p>
-<p>上面两条语句使得scanf从文件input.txt读入，printf写入文件output.txt。</p>
-<p>（注意：参赛之前仔细阅读文件读写的相关规定，有的竞赛只允许访问文件，但不允许用freopen这样的重定向方式读写文件）</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="http://lbamyr.top/posts/1045386572.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -435,9 +237,9 @@
       <meta itemprop="name" content="Libin and Meiyurou's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/1045386572.html" class="post-title-link" itemprop="url">ACM训练指导</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          ACM训练指导
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -467,7 +269,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <a id="more"></a>
+        <a id="more"></a>
 
 <p>引用自：<a target="_blank" rel="noopener" href="http://blog.csdn.net/liuqiyao_01/article/details/8477645">杭电acm阶段之理工大版</a></p>
 <p>​       <a target="_blank" rel="noopener" href="http://blog.csdn.net/ecjtu_yuweiwei/article/details/9257443">杭电ACM题目分类</a></p>
@@ -795,7 +597,6 @@
 <p>hdu4908</p>
 <p>hdu4910 数学 难道3<br>输入一个正整数n(n&lt;=1e18)，输出所有的i相乘并对n取余所得的值。（gcd(i,n)==1，1&lt;=i&lt;=n）<br>方法：<br>找规律：将n分解分所有质因子相乘，质因子2个数为a，其余质因子个数为b，ans=(a==0?a:a-1)+b;当ans&lt;2时结果为n-1，否则结果为1.<br>需要的知识：Miller_Rabin算法+线性筛<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38379971">http://blog.csdn.net/a601025382s/article/details/38379971</a></p>
 
-      
     </div>
 
     
@@ -803,162 +604,45 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>李彬
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="http://lbamyr.top/posts/1045386572.html" title="ACM训练指导">http://lbamyr.top/posts/1045386572.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/" rel="tag"># 算法训练</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/undefined.html" rel="prev" title="日程表">
+                  <i class="fa fa-chevron-left"></i> 日程表
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/1561858360.html" rel="next" title="第1日—Lgorithm-learning">
+                  第1日—Lgorithm-learning <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://lbamyr.top/posts/undefined.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/qianshou.png">
-      <meta itemprop="name" content="李彬">
-      <meta itemprop="description" content="这是属于我们两个的小站">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Libin and Meiyurou's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/undefined.html" class="post-title-link" itemprop="url">日程表</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2021-01-16 19:21:19 / Modified: 19:54:07" itemprop="dateCreated datePublished" datetime="2021-01-16T19:21:19+08:00">2021-01-16</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <hr>
-<h1 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h1><p>7：00 ~ 8：30         吃早饭，背单词</p>
-<p>8：30 ~ 12：00         开始学习数学+数据结构</p>
-<h1 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h1><p>12：00 ~2：00        吃饭+和老婆聊天娱乐</p>
-<p>2：00 ~ 6：00        学习数学+计算机组成原理（操作系统）</p>
-<h1 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h1><p>6：00 ~ 8：30        吃饭+和老婆聊天娱乐</p>
-<p>8：30 ~ 11：00      学习数学+数据结构（操作系统）</p>
-<p>11：00 ~ 12：00       和老婆聊天娱乐</p>
-<p>12：00 ~ ………..      睡觉</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://lbamyr.top/posts/410452635.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/qianshou.png">
-      <meta itemprop="name" content="李彬">
-      <meta itemprop="description" content="这是属于我们两个的小站">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Libin and Meiyurou's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/410452635.html" class="post-title-link" itemprop="url">李彬爱梅玉柔</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-16 16:43:07" itemprop="dateCreated datePublished" datetime="2021-01-16T16:43:07+08:00">2021-01-16</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 16:30:13" itemprop="dateModified" datetime="2021-01-19T16:30:13+08:00">2021-01-19</time>
-      </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <a id="more"></a>
-
-<p>这个博客用于记录我和老婆在一起成长的点点滴滴，希望我和她能够长长久久。</p>
-<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/sD5n6s"><img src="https://s3.ax1x.com/2021/01/16/sD5n6s.jpg" alt="sD5n6s.jpg"></a></p>
-<h1 id="在一起的第一天"><a href="#在一起的第一天" class="headerlink" title="在一起的第一天"></a>在一起的第一天</h1><p>​        我还依稀记得那年冬天，我是如此的激动以至于上课都无法静下心来，因为我知道我即将向她表白。她的名字叫梅玉柔，名字好听把，嘿嘿。第一次和她做同桌我就爱上了她，她在我的心里早已无可替代。也正是因为如此我决定今天明天晚上必须要向她表白，不管结果如何，我都不能留下遗憾。</p>
-<h1 id="早上"><a href="#早上" class="headerlink" title="早上"></a>早上</h1><p>​        也许是上天给了我们机会，第二天的上午我们就偶然相遇，一起迟到去学校，我也正好有了机会和你说：今天晚上别走，我有话要和你说。你当时停顿了一会，就说好呀。然后又继续询问我要干啥，我心里笑而不语，就和你说：晚上你就知道了，哈哈！</p>
-<p>​        白天上课我也听不进去，因为一直在脑海里遐想今晚该如何向你表白。我坐在最后一排，时不时就会在座位上看看你在干嘛，害怕有其他的男生会找你聊天，害怕你会拒绝我的表白，我的内心早已被你掳走。</p>
-<h1 id="中午"><a href="#中午" class="headerlink" title="中午"></a>中午</h1><p>​       未完待续……..</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
 
 
 
