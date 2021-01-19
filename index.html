@@ -45,7 +45,7 @@
     isPost : false,
     lang   : 'en'
   };
-</script><script src="/lib/fireworks.js"></script><script src="https://cdn.jsdelivr.net/npm/exif-js@2/exif.min.js"></script>
+</script><script src="https://cdn.jsdelivr.net/npm/exif-js@2/exif.min.js"></script><script src="/lib/fireworks.js"></script>
 <title>Libin and Meiyurou's Blog</title>
   
 
@@ -251,10 +251,26 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 16:30:03" itemprop="dateModified" datetime="2021-01-19T16:30:03+08:00">2021-01-19</time>
+        <time title="Modified: 2021-01-19 16:43:46" itemprop="dateModified" datetime="2021-01-19T16:43:46+08:00">2021-01-19</time>
       </span>
 
   
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>3.8k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>3 mins.</span>
+    </span>
 </div>
 
         </div>
@@ -264,140 +280,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <a id="more"></a>
-
-<h1 id="数据类型范围（int-long-long-int-用于解决数值溢出问题）"><a href="#数据类型范围（int-long-long-int-用于解决数值溢出问题）" class="headerlink" title="数据类型范围（int,long long int,用于解决数值溢出问题）"></a>数据类型范围（int,long long int,用于解决数值溢出问题）</h1><p><strong>有符号整数类型</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型名称</th>
-<th>字节数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>signed char</td>
-<td>1</td>
-<td>-2^7(-128) ~ 2^7-1(127)</td>
-</tr>
-<tr>
-<td>short int 或 short</td>
-<td>2</td>
-<td>-2^15(-32 768) ~ 2^15-1(32 767)</td>
-</tr>
-<tr>
-<td>int</td>
-<td>4</td>
-<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
-</tr>
-<tr>
-<td>long int 或 long</td>
-<td>4</td>
-<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
-</tr>
-<tr>
-<td>long long int 或 long long</td>
-<td>8</td>
-<td>-2^63(-9.2233720368548e+18) ~ 2^63-1(9.2233720368548e+18)</td>
-</tr>
-</tbody></table>
-<p><strong>无符号整数类型</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型名称</th>
-<th>字节数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>unsigned char</td>
-<td>1</td>
-<td>0 ~ 2^8-1(255)</td>
-</tr>
-<tr>
-<td>unsigned short int 或 unsigned short</td>
-<td>2</td>
-<td>0 ~ 2^16-1(65 535)</td>
-</tr>
-<tr>
-<td>unsigned int</td>
-<td>4</td>
-<td>0 ~ 2^32-1(4 294 967 295)</td>
-</tr>
-<tr>
-<td>unsigned long int 或 unsigned long</td>
-<td>4</td>
-<td>0 ~ 2^32-1(4 294 967 295)</td>
-</tr>
-<tr>
-<td>unsigned long long int 或 unsigned long long</td>
-<td>8</td>
-<td>0 ~ 2^64-1(1.844674407371e+19)</td>
-</tr>
-</tbody></table>
-<p><strong>浮点类型</strong></p>
-<table>
-<thead>
-<tr>
-<th>类型名称</th>
-<th>字节数</th>
-<th>取值范围</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>float</td>
-<td>4</td>
-<td>-/+3.4e38（精确到6位小数）</td>
-</tr>
-<tr>
-<td>double</td>
-<td>8</td>
-<td>-/+1.7e308（精确到15位小数）</td>
-</tr>
-<tr>
-<td>long double</td>
-<td>12</td>
-<td>-/+1.19e4932（精确到18位小数）</td>
-</tr>
-</tbody></table>
-<p>原文请查看：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42856843/article/details/81989737">https://blog.csdn.net/weixin_42856843/article/details/81989737</a></p>
-<h2 id="计算时输入溢出"><a href="#计算时输入溢出" class="headerlink" title="计算时输入溢出"></a>计算时输入溢出</h2><p>例如：P22 例题2-2   3n+1 </p>
-<p>解题方法：将 int 改为 long long / long long int</p>
-<p>（注意：在使用long long int /long long 时输入应当改为%lld）</p>
-<h2 id="计算时结果溢出"><a href="#计算时结果溢出" class="headerlink" title="计算时结果溢出"></a>计算时结果溢出</h2><p>例如：P25 例题2-4   阶乘之和 </p>
-<p>解题方法：每步计算都对n进行取余，每步取模运算</p>
-<p>（要计算只包含<u>加法，减法和乘法的整数表达式除以正整数n的余数</u>，可以在每步计算之后<u>对n取余，结果不变</u>）</p>
-<h2 id="常量定义"><a href="#常量定义" class="headerlink" title="常量定义"></a>常量定义</h2><p><code>const int MOD = 1000000;  #引自P24 例题2-4</code></p>
-<p>改善程序的可读性，方便修改</p>
-<h2 id="如何迅速判断程序是否溢出"><a href="#如何迅速判断程序是否溢出" class="headerlink" title="如何迅速判断程序是否溢出"></a>如何迅速判断程序是否溢出</h2><p>通过“输入中间变量”法来验证</p>
-<h1 id="计时函数clock"><a href="#计时函数clock" class="headerlink" title="计时函数clock()"></a>计时函数clock()</h1><p>头文件：#include&lt;time.h&gt;</p>
-<p>输出：printf(“Time used = %.2f\n”,(double)clock() / CLOCKS_PER_SEC);</p>
-<p>说明：该函数返回程序目前为止运行的时间，这个时间除以常数CLOCKS_PER_SEC之后得到的值以“秒”为单位。</p>
-<h2 id="clock-计时函数"><a href="#clock-计时函数" class="headerlink" title="clock()计时函数"></a>clock()计时函数</h2><p>clock()是C/C++中的计时函数，而与其相关的数据类型是clock_t。在MSDN中，查得对clock函数定义如下：<br>clock_t clock(void) ;<br>简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）；若挂钟时间不可取，则返回-1。其中clock_t是用来保存时间的数据类型。<br>在time.h文件中，我们可以找到对clock_t()的定义：</p>
-<p>#ifndef _CLOCK_T_DEFINED</p>
-<p><em>typedef long clock_t;</em></p>
-<p><em>#define _CLOCK_T_DEFINED</em><br><em>#endif</em></p>
-<p>很明显，clock_t是一个长整形数。在time.h文件中，还定义了一个常量CLOCKS_PER_SEC，它用来表示一秒钟会有多少个时钟计时单元，其定义如下：<br>#define CLOCKS_PER_SEC ((clock_t)1000)</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算一段程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">8</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"> <span class="number">9</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">10</span>     &#123;</span><br><span class="line"><span class="number">11</span>         i++;</span><br><span class="line"><span class="number">12</span>     &#125;</span><br><span class="line"><span class="number">13</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">14</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is: &quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">15</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">16</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">17</span> &#125;</span><br><span class="line"><span class="number">18</span> <span class="comment">//注释在:VC++6.0中可以用CLK_TCK替换CLOCKS_PER_SEC。</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算整个程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">12</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">13</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">14</span> &#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//两个写在一起</span></span><br><span class="line"> <span class="number">1</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">4</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 5 </span>&#123;</span><br><span class="line"> <span class="number">6</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"><span class="number">12</span>     <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">13</span>     &#123;</span><br><span class="line"><span class="number">14</span>         i++;</span><br><span class="line"><span class="number">15</span>     &#125;</span><br><span class="line"><span class="number">16</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">17</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">18</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">19</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">20</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">21</span> &#125;</span><br></pre></td></tr></table></figure>
-<p>部分内容引自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/didiaodidiao/p/9194702.html">https://www.cnblogs.com/didiaodidiao/p/9194702.html</a></p>
-<h1 id="C语言输出格式要求"><a href="#C语言输出格式要求" class="headerlink" title="C语言输出格式要求"></a>C语言输出格式要求</h1><p>例如题目让输出 025，而有时候系统默认输出 25，此时我们可以用 %03d或%.3d 使 25 输出为 025。</p>
-<h1 id="算法竞赛中的输入输出框架"><a href="#算法竞赛中的输入输出框架" class="headerlink" title="算法竞赛中的输入输出框架"></a>算法竞赛中的输入输出框架</h1><p>例：P27 例题 2-5 数据统计</p>
-<p>由于整数的个数是不确定的，我们得解决这个问题。</p>
-<p>直接上代码：<code>while(scanf(&quot;%d&quot;,&amp;x) == 1)</code></p>
-<p>解释：scanf函数是有返回值的，它返回的是成功输入的变量个数，当输入结束时，scanf函数无法再次读取x，将返回0.</p>
-<p>但是细心的小伙伴运行程序后肯定会发现按下“Enter”键后未显示结果。并不是程序运行太慢，其实程序是在等待输入。scanf函数的输入格式：空格，TAB和回车符都是无关紧要的，所以按下Ente键并不意味着输入的结束。那么我们该如何告诉程序输入结束了呢？</p>
-<p>提示：在Windows下，输入完毕后先按下Enter键，再按Ctrl+Z键，最后再按Enter键，即可结束输入。在Linux下，输入完毕后按Ctrl+D键即可结束输入。</p>
-<h1 id="文件输入输出讨论"><a href="#文件输入输出讨论" class="headerlink" title="文件输入输出讨论"></a>文件输入输出讨论</h1><p>​       相信在上一节我提到的scanf函数的使用方式后，大家也会发现每次调试程序的时候并不方便，尤其是上面的例题中程序值是溢出的，那也就意味着我们会进行多次的调试。</p>
-<p>​       Good means：用文件——把输入数据保存在文件中，输出数据也保存在文件中。这样，事先把输入的数据保存在命令行中，就不必每次重新输入了；</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>最简单的方法是使用输入输出重定向，只需在main函数的入口处加入以下两条语句：</p>
-<p><code>freopen(&quot;input.txt&quot;,&quot;r&quot;,stdin);</code></p>
-<p><code>freopen(&quot;output.txt&quot;,&quot;w&quot;,stdout);</code></p>
-<p>上面两条语句使得scanf从文件input.txt读入，printf写入文件output.txt。</p>
-<p>（注意：参赛之前仔细阅读文件读写的相关规定，有的竞赛只允许访问文件，但不允许用freopen这样的重定向方式读写文件）</p>
-
+          <p><center>第一天的学习</center></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/1561858360.html">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -454,10 +345,26 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 16:29:45" itemprop="dateModified" datetime="2021-01-19T16:29:45+08:00">2021-01-19</time>
+        <time title="Modified: 2021-01-19 16:43:20" itemprop="dateModified" datetime="2021-01-19T16:43:20+08:00">2021-01-19</time>
       </span>
 
   
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>32k</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>29 mins.</span>
+    </span>
 </div>
 
         </div>
@@ -467,334 +374,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <a id="more"></a>
-
-<p>引用自：<a target="_blank" rel="noopener" href="http://blog.csdn.net/liuqiyao_01/article/details/8477645">杭电acm阶段之理工大版</a></p>
-<p>​       <a target="_blank" rel="noopener" href="http://blog.csdn.net/ecjtu_yuweiwei/article/details/9257443">杭电ACM题目分类</a></p>
-<p>​       <a target="_blank" rel="noopener" href="http://www.pythontip.com/acm/problemCategory">各大OJ题目分类</a></p>
-<p>​       <a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38612635">hdu（杭电oj）第一页题目题解</a></p>
-<p>​      <a target="_blank" rel="noopener" href="http://blog.csdn.net/u010020581/article/details/8794117">ACM牛人给的新手建议（这个也是转载的）</a></p>
-<p>供留备查用</p>
-<p>杭电acm阶段之理工大版</p>
-<p>[671原创，欢迎转载]</p>
-<p>以下题均为杭电acm网页的题号</p>
-<p>首页<a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/">http://acm.hdu.edu.cn/</a></p>
-<p>题库入口<a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/listproblem.php?vol=1">http://acm.hdu.edu.cn/listproblem.php?vol=1</a></p>
-<p>帮助<a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/faq.php?lang=chs">http://acm.hdu.edu.cn/faq.php?lang=chs</a></p>
-<p>此次培训主要锻炼同学们的算法学习，更重要的是锻炼同学们的自学能力，对于我们学计算机的同学来说，自学能力是关键，如果你真的指望从老师那里学到什么的话。。。。。。。。。。。。。。。（千万不能告诉老师）所以，这个真的很关键，首先是独立思考问题的能力，我对同学们的要求是，如果同学们遇到了问题，至少独立思考1小时以上，才可以从网上找答案或者问别人。不要觉得这个要求苛刻，其实这是一个很好的方法，如果一遇到不会的难题就上网查或者问，虽然可能题一会做出来了，但是下次碰见还是不会，甚至根本就没有印象。我经常调试程序3、4个小时以上，偶尔都会有10个小时的调试。这对同学们日后的学习很有帮助。</p>
-<h1 id="第一阶段：开始入门吧！（15天，53题）"><a href="#第一阶段：开始入门吧！（15天，53题）" class="headerlink" title="第一阶段：开始入门吧！（15天，53题）"></a>第一阶段：开始入门吧！（15天，53题）</h1><p>一．输入输出练习（2天，10题）</p>
-<p>​     1000、1089—1096、1001</p>
-<p>二．简单操作：（2—4天，12题）</p>
-<p>​     2000—2011、2039</p>
-<p>三．英文题试水（3—4天，8题）</p>
-<p>​     1720、1062、2104、1064、2734、1170、1197、2629</p>
-<p>四．回归水题（4-6天，24题）</p>
-<p>​     2012—2030、2032、2040、2042、2054、2055</p>
-<p>（第一阶段大体结束之后，会由几位学长讲一些数据结构的知识，请同学们务必跟上进度！）</p>
-<h1 id="第二阶段：我要学算法！（12天，31题）"><a href="#第二阶段：我要学算法！（12天，31题）" class="headerlink" title="第二阶段：我要学算法！（12天，31题）"></a>第二阶段：我要学算法！（12天，31题）</h1><p>一．字符串我要会处理（2天，6题）</p>
-<p>​     2072、2081、2093、2091、1004、2057</p>
-<p>二．简单数学题（4天，12题）</p>
-<p>​     2031、2033、2070、2071、2075、2089、2090、2092、2096—2099</p>
-<p>三．要玩就玩汉诺塔（2天,5题）</p>
-<p>​     1995、1996、2064、2077、2175</p>
-<p>四．As easy as math（4天，8题）</p>
-<p>​     1108、2138、1713、1722、2136、2504、1717、1125</p>
-<h1 id="第三阶段：acm无底洞啊！（10天，18题）"><a href="#第三阶段：acm无底洞啊！（10天，18题）" class="headerlink" title="第三阶段：acm无底洞啊！（10天，18题）"></a>第三阶段：acm无底洞啊！（10天，18题）</h1><p>一．初见dp（2—4天，4题）</p>
-<p>​     2062、1087、1203、1003</p>
-<p>二．迷宫之烟雾缭绕（2—4天，3题）</p>
-<p>​     1728、1010、1072</p>
-<p>三．数学题做不下去了。（3-5天，8题）</p>
-<p>​     1052、1568、1443、1222、1249、1005、2674、1018</p>
-<p>四．龙门客栈，暗藏玄机（2—3天，3题）</p>
-<p>​     1022、1237、1082</p>
-<h1 id="第四阶段：大家自学吧！（搞ACM同学请看）"><a href="#第四阶段：大家自学吧！（搞ACM同学请看）" class="headerlink" title="第四阶段：大家自学吧！（搞ACM同学请看）"></a>第四阶段：大家自学吧！（搞ACM同学请看）</h1><p>大家从网站自己找资料，看一下acm的分类情况，然后根据自己的想法，以及组队安排，来对某一知识点优先学习，但是尽量在半年内还是保持全面发展，半年后在开始分方向。</p>
-<p>^o^</p>
-<p>刷完这些题的同学~~~按照POJ分类来刷下初级。</p>
-<p>传送门：<a target="_blank" rel="noopener" href="http://blog.csdn.net/liuqiyao_01/article/details/8477801">http://blog.csdn.net/liuqiyao_01/article/details/8477801</a></p>
-<p>刷完初级，省赛铜牌就没问题了~~~</p>
-<p>​                                                                         671敬上</p>
-<h1 id=""><a href="#" class="headerlink" title=""></a></h1><h3 id="ACM进阶"><a href="#ACM进阶" class="headerlink" title="ACM进阶"></a>ACM进阶</h3><p>一位高手的建议：<br>一般要做到50行以内的程序不用调试、100行以内的二分钟内调试成功.</p>
-<p>训练过ACM等程序设计竞赛的人在算法上有较大的优势，这就说明当你编程能力提高之后，主要时间是花在思考算法上，不是花在写程序与debug上。<br>下面给个计划你练练：</p>
-<p>第一阶段：练经典常用算法，下面的每个算法给我打上十到二十遍，同时自己精简代码，因为太常用，所以要练到写时不用想，10-15分钟内打完，甚至关掉显示器都可以把程序打出来。</p>
-<p>1.最短路(Floyd、Dijstra,BellmanFord)<br>2.最小生成树(先写个prim,kruscal要用并查集，不好写)<br>3.大数（高精度）加减乘除<br>4.二分查找. (代码可在五行以内)<br>5.叉乘、判线段相交、然后写个凸包.<br>6.BFS、DFS,同时熟练hash表(要熟，要灵活,代码要简)<br>7.数学上的有：辗转相除（两行内），线段交点、多角形面积公式.<br>\8. 调用系统的qsort, 技巧很多，慢慢掌握.<br>\9. 任意进制间的转换</p>
-<p>第二阶段：练习复杂一点，但也较常用的算法。<br>如：<br>\1. 二分图匹配（匈牙利），最小路径覆盖<br>\2. 网络流，最小费用流。<br>\3. 线段树.<br>\4. 并查集。<br>\5. 熟悉动态规划的各个典型：LCS、最长递增子串、三角剖分、记忆化dp<br>6.博弈类算法。博弈树，二进制法等。<br>7.最大团，最大独立集。<br>8.判断点在多边形内。<br>\9. 差分约束系统.<br>\10. 双向广度搜索、A*算法，最小耗散优先.</p>
-<p>第三阶段：<br>  前两个阶段是打基础，第三阶段是锻炼在比赛中可以快速建立模型、想新算法。这就要平时多做做综合的题型了。<br>\1. 把oibh上的论文看看（大概几百篇的，我只看了一点点，呵呵）。<br>\2. 平时扫扫zoj上的难题啦，别老做那些不用想的题.(中大acm的版主经常说我挑简单的来做:-P )<br>\3. 多参加网上的比赛，感受一下比赛的气氛，评估自己的实力.<br>\4. 一道题不要过了就算，问一下人，有更好的算法也打一下。<br>\5. 做过的题要记好 :-)<br>下面转自：<a target="_blank" rel="noopener" href="http://hi.baidu.com/wilworld/blog/item/88b1b844d37e4049500ffe6a.html">http://hi.baidu.com/wilworld/blog/item/88b1b844d37e4049500ffe6a.html</a></p>
-<p>算法书有很多可以参考：</p>
-<p>1、Concrete Mathematics — A Foundation For Computer Science<br>Ronald L. Graham ， Donald E. Knuth ， Oren Patashnik<br>　　这本书《具体数学》是Stanford计算机系的教材（1970 年开始给研究生授课），书的内容是Knuth的巨著TAOCP第一章的扩展，涉及了计算机科学领域内几乎所有可能遇到的数学知识。书中许多经典问题的解答比目前广泛流传的解法更易懂。对于提高大家的数学修养有很大帮助。</p>
-<p>2、Introduction to Algorithms<br>Thomas H. Cormen ，Charles E. Leiserson ，Ronald L. Rivest ，Clifford Stein<br>　　《算法导论》MIT计算机系的经典算法教材。作者Rivest获得过ACM Turing Award，牛！本书内容全面，语言通俗，很适合大家入门。</p>
-<p>3、实用算法的分析和程序设计<br>吴文虎 王建德<br>　　大名鼎鼎的“黑书”。内容包括了竞赛需要的各种算法，各种层次的读者都适合。</p>
-<p>【这里是我自己加的：其实所谓”黑书”,还有一本，《算法艺术与信息学竞赛》作者：刘汝佳 黄亮，很经典，很流行】<br>4、网络算法与复杂性理论<br>谢政 李建平<br>　　内容很丰富的图论教材</p>
-<p>5、算法+数据结构=程序<br>N.Wirth<br>　　Pascal语言的发明人Wirth教授的名著，深入阐述了算法与数据结构的关系，对每个算法都提供详细的Pascal源程序，适合各种水平的读者。</p>
-<p>　　最后，在学习算法提升战斗力的同时，也要多做题目，实战是很有必要的。其实并不是所有的题目都是靠算法的，有一些题目是有多种可以优化的手段，也有一些工程性比较强的题目。上手做和把题做精还是有很大区别的（惭愧的说，我就是属于上手做，没有做精，所以……）。</p>
-<h1 id="愿每一位程序设计竞赛爱好者挑战极限！"><a href="#愿每一位程序设计竞赛爱好者挑战极限！" class="headerlink" title="　　愿每一位程序设计竞赛爱好者挑战极限！"></a>　　愿每一位程序设计竞赛爱好者挑战极限！</h1><p>ACMer必备知识（任重而道远……）</p>
-<p>图论</p>
-<p>  路径问题<br>    0/1边权最短路径<br>    BFS<br>    非负边权最短路径（Dijkstra）<br>      可以用Dijkstra解决问题的特征<br>    负边权最短路径<br>    Bellman-Ford<br>      Bellman-Ford的Yen-氏优化<br>      差分约束系统<br>    Floyd<br>      广义路径问题<br>      传递闭包<br>      极小极大距离 / 极大极小距离<br>    Euler Path / Tour<br>      圈套圈算法<br>      混合图的 Euler Path / Tour<br>    Hamilton Path / Tour<br>      特殊图的Hamilton Path / Tour 构造</p>
-<p>  生成树问题<br>    最小生成树<br>    第k小生成树<br>    最优比率生成树<br>    0/1分数规划<br>    度限制生成树</p>
-<p>  连通性问题<br>    强大的DFS算法<br>    无向图连通性<br>      割点<br>      割边<br>      二连通分支<br>      有向图连通性<br>      强连通分支<br>      2-SAT<br>      最小点基</p>
-<p>  有向无环图<br>    拓扑排序<br>      有向无环图与动态规划的关系</p>
-<p>  二分图匹配问题<br>    一般图问题与二分图问题的转换思路<br>    最大匹配<br>      有向图的最小路径覆盖<br>      0 / 1矩阵的最小覆盖<br>    完备匹配<br>    最优匹配<br>    稳定婚姻</p>
-<p>  网络流问题<br>    网络流模型的简单特征和与线性规划的关系<br>    最大流最小割定理<br>    最大流问题<br>      有上下界的最大流问题<br>        循环流<br>    最小费用最大流 / 最大费用最大流</p>
-<p>  弦图的性质和判定</p>
-<p>组合数学</p>
-<p>  解决组合数学问题时常用的思想<br>    逼近<br>    递推 / 动态规划<br>  概率问题<br>    Polya定理</p>
-<p>计算几何 / 解析几何</p>
-<p>  计算几何的核心：叉积 / 面积<br>  解析几何的主力：复数</p>
-<p>  基本形<br>    点<br>    直线，线段<br>    多边形</p>
-<p>  凸多边形 / 凸包<br>    凸包算法的引进，卷包裹法</p>
-<p>  Graham扫描法<br>    水平序的引进，共线凸包的补丁</p>
-<p>  完美凸包算法</p>
-<p>  相关判定<br>    两直线相交<br>    两线段相交<br>    点在任意多边形内的判定<br>    点在凸多边形内的判定</p>
-<p>  经典问题<br>    最小外接圆<br>      近似O(n)的最小外接圆算法<br>    点集直径<br>      旋转卡壳，对踵点<br>    多边形的三角剖分</p>
-<p>数学 / 数论</p>
-<p>  最大公约数<br>    Euclid算法<br>      扩展的Euclid算法<br>        同余方程 / 二元一次不定方程<br>        同余方程组</p>
-<p>  线性方程组<br>    高斯消元法<br>      解mod 2域上的线性方程组<br>    整系数方程组的精确解法</p>
-<p>  矩阵<br>    行列式的计算<br>      利用矩阵乘法快速计算递推关系</p>
-<p>  分数<br>    分数树<br>    连分数逼近</p>
-<p>  数论计算<br>    求N的约数个数<br>    求phi(N)<br>    求约数和<br>    快速数论变换<br>    ……</p>
-<p>  素数问题<br>    概率判素算法<br>    概率因子分解</p>
-<p>数据结构</p>
-<p>  组织结构<br>    二叉堆<br>    左偏树<br>    二项树<br>    胜者树<br>    跳跃表<br>    样式图标<br>    斜堆<br>    reap</p>
-<p>  统计结构<br>    树状数组<br>    虚二叉树<br>    线段树<br>      矩形面积并<br>      圆形面积并</p>
-<p>  关系结构<br>    Hash表<br>    并查集<br>      路径压缩思想的应用</p>
-<p>  STL中的数据结构<br>    vector<br>    deque<br>    set / map</p>
-<p>动态规划 / 记忆化搜索</p>
-<p>  动态规划和记忆化搜索在思考方式上的区别</p>
-<p>  最长子序列系列问题<br>    最长不下降子序列<br>    最长公共子序列<br>    最长公共不下降子序列</p>
-<p>  一类NP问题的动态规划解法</p>
-<p>  树型动态规划</p>
-<p>  背包问题</p>
-<p>  动态规划的优化<br>    四边形不等式<br>    函数的凸凹性<br>    状态设计<br>    规划方向</p>
-<p>线性规划</p>
-<p>常用思想</p>
-<p>  二分<br>  最小表示法</p>
-<p>串</p>
-<p>  KMP<br>  Trie结构<br>  后缀树/后缀数组<br>  LCA/RMQ<br>  有限状态自动机理论</p>
-<p>排序<br>  选择/冒泡<br>  快速排序<br>  堆排序<br>  归并排序<br>  基数排序<br>  拓扑排序<br>  排序网络</p>
-<h1 id="-1"><a href="#-1" class="headerlink" title=""></a></h1><h1 id="-2"><a href="#-2" class="headerlink" title=""></a></h1><h1 id="杭电ACM题目分类"><a href="#杭电ACM题目分类" class="headerlink" title="杭电ACM题目分类"></a>杭电ACM题目分类</h1><p><strong>——鱼尾尾</strong></p>
-<p>基础题：1000、1001、1004、1005、1008、1012、1013、1014、1017、1019、1021、1028、1029、1032、1037、1040、1048、1056、1058、1061、1070、1076、1089、1090、1091、1092、1093、1094、1095、1096、1097、1098、1106、1108、1157、1163、1164、1170、1194、1196、1197、1201、1202、1205、1219、1234、1235、1236、1248、1266、1279、1282、1283、1302、1303、1323、1326、1330、1334、1335、1339、1390、1391、1393、1395、1397、1405、1406、1407、1408、1412、1418、1420、1465、1491、1555、1562、1563、1570、1587、1673、1678、1708、1718、1720、1785、1799、1859、1862、1877、1898、1976、1977、1985、1994、2000、2001、2002、2003、2004、2005、2006、2007、2008、2009、2010、2011、2012、2013、2014、2015、2016、2017、2018、2019、2020、2021、2022、2023、2024、2025、2026、2027、2028、2029、2030、2031、2032、2033、2034、2035、2039、2040、2042、2043、2048、2049、2051、2053、2055、2056、2057、2060、2061、2071、2073、2075、2076、2078、2081、2083、2088、2090、2092、2093、2095、2096、2097、2098、2099、2101、2103、2106、2107、2109、2113、2114、2115、2123、2131、2132、2133、2135、2136、2137、2138、2139、2143、2148、2153、2156、2161、2162、2164、2178、2186、2192、2200、2201、2212、2304、2309、2317、2401、2500、2502、2503、2504、2519、2520、2521、2523、2524、2535、2537、2539、2547、2548、2549、2550、2551、2552、2555、2560、2561、2562、2566、2567、2568、2700、2710、</p>
-<p>DP：1003、10240、1029、1069、1074、1087、1114、1159、1160、1171、1176、1203、1231、1257、1260、1284、1421、1789、1978、2059、2084、2159、2191、2544、2571、2602、2709、</p>
-<p>搜索：1010、1015、1016、1026、1072、1075、1175、1180、1181、1238、1239、1240、1241、1242、1253、1254、1312、1372、1548、1597、1671、1677、1728、1800、1983、2102、2141、2553、2563、2605、2612、2614、1616、2717</p>
-<p>贪心：1009、1045、1049、1050、1051、1052、1257、1800、2037、2111、2124、2187、2391、2570</p>
-<p>数学题：1018、1065、1071、1115、1141、1162、1212、1220、1492、1593、1701、1722、1798、1840、1999、2036、2080、2086、2089、2105、2108、2134、2303、2393、2438、2529、2547、2548、2552、2554、2601、2603、2701、</p>
-<p>递推：1133、1143、1207、1249、1267、1284、1290、1297、1396、1992、1995、1996、2013、2014、2044、2045、2046、2047、2050、2064、2065、2067、2068、2070、2077、2085、2151、2154、2160、2190、2501、2512、2563、2569、2709、2716、</p>
-<p>字符串：1020、1039、1043、1062、1073、1075、1088、1113、1161、1200、1251、1256、1288、1321、1328、1379、1804、1860、1982、1984、2017、2024、2025、2026、2027、2043、2052、2054、2072、2074、2087、2131、2137、2140、2163、2203、2206、2352、2500、2549、2564、2565、2567、2572、2609、2607、2707、2708、2719、2721、2723、</p>
-<p>大数：1002、1042、1133、1250、1297、1715、1753、1865、2100、</p>
-<p>胡搞：1022、1027、1030、1035、1128、1165、1209、1210、1215、1222、1228、1229、1230、1237、1259、1276、1286、1337、1342、1361、1370、1506、1577、1597、1702、1716、1727、1868、1870、1896、1981、1986、1987、1988、1997、1998、1999、2058、2062、2089、2090、2094、2104、2116、2117、2135、2175、2183、2184、2197、2303、2368、2370、2374、2511、2522、2527、2600、2615、2703、2711、2714、2715、2725、</p>
-<p>博弈：1077、1404、1517、1524、1525、1527、1536、1564、1729、1730、1846、1847、1848、1849、1850、2147、2149、2176、2177、2188</p>
-<p>母函数：1085、1171、1398、2079、2082、2110、2152、2189、2566、</p>
-<p>hash：1264、1280、1425、1496、1800、2522、2600、</p>
-<p>-———————————————————————————————————————————————————————————————————————————————————————————————————————————–</p>
-<p>按照ac的代码长度分类（主要参考最短代码和自己写的代码）<br>短代码：0.01K–0.50K；中短代码：0.51K–1.00K；中等代码量：1.01K–2.00K；长代码：2.01K以上。</p>
-<p>短：1147、1163、1922、2211、2215、2229、2232、2234、2242、2245、2262、2301、2309、2313、2334、2346、2348、2350、2352、2381、2405、2406；</p>
-<p>中短：1014、1281、1618、1928、1961、2054、2082、2085、2213、2214、2244、2247、2255、2257、2258、2260、2265、2272、2273、2275、2287、2299、2329、2376；</p>
-<p>中等：1001、1018、1037、1039、1054、1125、1655、2165、2210、2212、2225、2240、2241、2243、2246、2254、2303、2312、2339；</p>
-<p>长：1009、1010、1015、2050。</p>
-<p>附注：</p>
-<p>短（中短）代码但要有思想（一定难度）：1014、1147、1618、1961、2054、2082、2232、2244、2255、2273、2287、2299、2313、2348、2352、2376、2406；</p>
-<p>长代码但没有难度：2050。</p>
-<p>-————————————————————————————————————————–<br>动态规划：<br>1037 A decorative fence、1050 To the Max、1088 滑雪、1125 Stockbroker Grapevine、1141 Brackets Sequence、1159 Palindrome、1160 Post Office、1163 The Triangle、1458 Common Subsequence、1579 Function Run Fun、1887 Testing the CATCHER、1953 World Cup Noise、2386 Lake Counting</p>
-<p>简单、模拟题：<br>1001 Exponentiation 、1002 487-3279、1003 Hangover 、1701 Dissatisfying Lift、2301 Beat the Spread!、2304 Combination Lock、2328 Guessing Game、2403 Hay Points 、2406 Power Strings、2339 Rock, Scissors, Paper、2350 Above Average、2218 Does This Make Me Look Fat?、2260 Error Correction、2262 Goldbach&#39;s Conjecture、2272 Bullseye、2136 Vertical Histogram、2174 Decoding Task、2183 Bovine Math Geniuses、2000 Gold Coins、2014 Flow Layout、2051 Argus、2081 Calendar、1918 Ranking List、1922 Ride to School、1970 The Game、1972 Dice Stacking、1974 The Happy Worm、1978 Hanafuda Shuffle、1979 Red and Black、1617 Crypto Columns、1666 Candy Sharing Game、1674 Sorting by Swapping、1503 Integer Inquiry、1504 Adding Reversed Numbers、1528 Perfection、1546 Basically Speaking、1547 Clay Bully、1573 Robot Motion、1575 Easier Done Than Said?、1581 A Contesting Decision、1590 Palindromes、1454 Factorial Frequencies、1363 Rails、1218 THE DRUNK JAILER、1281 MANAGER、1132 Border、1028 Web Navigation、<br>博弈类<br>1067 取石子游戏、1740 A New Stone Game、2234 Matches Game、1082 Calendar Game 、2348 Euclid&#39;s Game、2413 How many Fibs?、2419 Forests<br>初等数学<br>1003 Hangover、1045 Bode Plot、1254 Hansel and Grethel、1269 Intersecting Lines、1401 Factorial、1410 Intersection、2363 Blocks 、2365 Rope、2242 The Circumference of the Circle、2291 Rotten Ropes、2295 A DP Problem、2126 Factoring a Polynomial、2191 Mersenne Composite Numbers、2196 Specialized Four-Digit Numbers、1914 Cramer&#39;s Rule、1835 宇航员、1799 Yeehaa!、1607 Deck、1244 Slots of Fun、1269 Intersecting Lines、1299 Polar Explorer、1183 反正切函数的应用、</p>
-<p>图论及组合数学<br>2421 Constructing Roads、2369 Permutations、2234 Matches Game、2243 Knight Moves、2249 Binomial Showdown、2255 Tree Recovery、2084 Game of Connections、1906 Three powers、1833 排列、1850 Code、1562 Oil Deposits、1496 Word Index、1306 Combinations、1125 Stockbroker Grapevine、1129 Channel Allocation、1146 ID Codes、1095 Trees Made to Order、找规律2247 Humble Numbers、2309 BST、2346 Lucky tickets、2370 Democracy in danger、2365 Rope、2101 Honey and Milk Land<br>2028 When Can We Meet?、2084 Game of Connections、1915 Knight Moves、1922 Ride to School、1941 The Sierpinski Fractal、1953 World Cup Noise、1958 Strange Towers of Hanoi、1969 Count on Canton、1806 Manhattan 2025、1809 Regetni、1844 Sum、1870 Bee Breeding、1702 Eva&#39;s Balance、1728 A flea on a chessboard、1604 Just the Facts、1642 Stacking Cubes、1656 Counting Black、1657 Distance on Chessboard、1662 CoIns、1663 Number Steps、1313 Booklet Printing、1316 Self Numbers、1320 Street Numbers、1323 Game Prediction、1338 Ugly Numbers、1244 Slots of Fun、1250 Tanning Salon、1102 LC-Display、1147 Binary codes、1013 Counterfeit Dollar、<br>-————————————————————————————————————————–<br>题目分类<br>排序 1002（需要字符处理，排序用快排即可） 1007（稳定的排序） 2159（题意较难懂） 2231 2371（简单排序） 2388（顺序统计算法） 2418（二叉排序树）</p>
-<p>回溯搜索：1979（和迷宫类似） 1980（对剪枝要求较高）</p>
-<p>数学计算 简单（或不值得做的题）：1003 1004 1005 1068 1326 1656 1657 1658 1663 1922 1978 2000 2013 2014 2017 2070 2101 2105 2140 2190 2272 2301 2405 2419<br>     中等：1006（中国剩余定理） 1323 1969 2015（解密码） 2081（预处理） 2085（找规律）<br>难： 1014 1037 1147 2082 （这些是上课讲的）</p>
-<p>高精度计算：1001（高精度乘法） 2413(高精度加法，还有二分查找)</p>
-<p>历法：1008 2080 （这种题要小心）</p>
-<p>枚举：1054（剪枝要求较高） 1650 （小数的精度问题）</p>
-<p>数据结构的典型算法：1125(弗洛伊德算法) 2421（图的最小生成树）</p>
-<p>动态规划：1163（经典题）</p>
-<p>贪心：1328 1755（或用单纯形方法） 2054</p>
-<p>模拟： 1281 1928 2083 2141 2015</p>
-<p>递归： 1664<br>字符串处理：2121 2403</p>
-<p>-————————————————————————————————————————–<br>有标准模型的：<br>1125 1163 1183 1979 1185 1184 1187<br>寻找新算法的：<br>1014 1067 1147 1922 2082<br>调节情绪用：<br>1004 950 1218 1281 1928 1978 2000 2027</p>
-<p>-————————————————————————————————————————–<br>主流算法：<br>1.搜索　//回溯<br>2.DP（动态规划）　<br>3.贪心　<br>4.图论　//Dijkstra、最小生成树、网络流<br>5.数论　//解模线性方程<br>6.计算几何　//凸壳、同等安置矩形的并的面积与周长<br>7.组合数学　//Polya定理<br>8.模拟　<br>9.数据结构　//并查集、堆<br>10.博弈论　<br>//表示举例</p>
-<p>非主流算法：<br>1.送分题　<br>2.构造　<br>3.高精度　<br>4.几何　<br>5.排序　<br>6.日期/时间处理　（这类题目相当多的）<br>7.数学方法　<br>8.枚举　<br>9.递推　<br>10.递归　<br>11.分治　</p>
-<p>说明：<br>显然“送分题”不是一种算法。但是ACM竞赛中经常有一些很简单很简单的题目，具体涉及内容繁杂，难以归类，干脆就管他们叫送分题。<br>几何不同于计算几何，计算几何或者叫S计算几何，以Shamos在1975年发表的一篇论文为诞生标志。其实两者有很大的不同。</p>
-<p>部分题目分类统计：</p>
-<p>网络流：<br>最大流：<br>1087 a plug for UNIX<br>1149 PIGS<br>1273 drainage ditches<br>1274 the perfect stall<br>1325 machine schedule<br>1459 power network<br>2239 selecting courses<br>最小费用最大流：<br>2195 going home<br>?2400 supervisor, supervisee</p>
-<p>压缩存储的DP<br>1038 bugs integrated inc<br>1185 炮兵阵地<br>2430 lazy cow</p>
-<p>最长公共子串（LCS）：<br>1080 human gene functions<br>1159 palindrome<br>1458 common subsequence<br>2192 zipper</p>
-<p>凸包<br>1113 wall<br>2187 beauty contest</p>
-<p>-————————————————————————————————————————–</p>
-<p>说明：递推算动归， 离散化算数据结构， 并查集算数据结构， 博弈算动归， 麻烦题一般都是不错的综合题， 最短路算图论，数据的有序化算排序</p>
-<p>麻烦题：<br>1697, 1712, 1713, 1720, 1729, 1765, 1772, 1858, 1872, 1960, 1963, 2050, 2122, 2162, 2219, 2237,</p>
-<p>简单题目：<br>1000, 1003, 1004, 1005, 1007, 1046, 1207, 1226, 1401, 1504, 1552, 1607, 1657, 1658, 1674, 1799, 1862, 1906, 1922, 1929, 1931, 1969, 1976, 2000, 2005, 2017, 2027, 2070, 2101, 2105, 2109, 2116, 2136, 2160, 2190, 2232, 2234, 2275, 2301, 2350, 2363, 2389, 2393, 2413, 2419,<br>推荐：<br>1063, 1064, 1131, 1140, 1715, 2163,</p>
-<p>杂题：<br>1014, 1218, 1316, 1455, 1517, 1547, 1580, 1604, 1663, 1678, 1749, 1804, 2013, 2014, 2056, 2059, 2100, 2188, 2189, 2218, 2229, 2249, 2290, 2302, 2304, 2309, 2313, 2316, 2323, 2326, 2368, 2369, 2371, 2402, 2405, 2407,<br>推荐：<br>1146, 1147, 1148, 1171, 1389, 1433, 1468, 1519, 1631, 1646, 1672, 1681, 1700, 1701, 1705, 1728, 1735, 1736, 1752, 1754, 1755, 1769, 1781, 1787, 1796, 1797, 1833, 1844, 1882, 1933, 1941, 1978, 2128, 2166, 2328, 2383, 2420,</p>
-<p>高精度：<br>1001, 1220, 1405, 1503,</p>
-<p>排序：<br>1002, 1318, 1877, 1928, 1971, 1974, 1990, 2001, 2002, 2092, 2379, 2388, 2418,<br>推荐：<br>1423, 1694, 1723, 1727, 1763, 1788, 1828, 1838, 1840, 2201, 2376, 2377, 2380,</p>
-<p>搜索<br>容易：<br>1128, 1166, 1176, 1231, 1256, 1270, 1321, 1543, 1606, 1664, 1731, 1742, 1745, 1847, 1915, 1950, 2038, 2157, 2182, 2183, 2381, 2386, 2426,<br>不易：<br>1024, 1054, 1117, 1167, 1708, 1746, 1775, 1878, 1903, 1966, 2046, 2197, 2349,<br>推荐：<br>1011, 1190, 1191, 1416, 1579, 1632, 1639, 1659, 1680, 1683, 1691, 1709, 1714, 1753, 1771, 1826, 1855, 1856, 1890, 1924, 1935, 1948, 1979, 1980, 2170, 2288, 2331, 2339, 2340,</p>
-<p>数据结构<br>容易：<br>1182, 1656, 2021, 2023, 2051, 2153, 2227, 2236, 2247, 2352, 2395,<br>不易：<br>1145, 1177, 1195, 1227, 1661, 1834,<br>推荐：<br>1330, 1338, 1451, 1470, 1634, 1689, 1693, 1703, 1724, 1988, 2004, 2010, 2119, 2274,</p>
-<p>动态规划<br>容易：<br>1018, 1050, 1083, 1088, 1125, 1143, 1157, 1163, 1178, 1179, 1189, 1208, 1276, 1322, 1414, 1456, 1458, 1609, 1644, 1664, 1690, 1699, 1740, 1742, 1887, 1926, 1936, 1952, 1953, 1958, 1959, 1962, 1975, 1989, 2018, 2029, 2033, 2063, 2081, 2082, 2181, 2184, 2192, 2231, 2279, 2329, 2336, 2346, 2353, 2355, 2356, 2385, 2392, 2424,<br>不易：<br>1019, 1037, 1080, 1112, 1141, 1170, 1192, 1239, 1655, 1695, 1707, 1733, 1737, 1837, 1850, 1920, 1934, 1937, 1964, 2039, 2138, 2151, 2161, 2178,<br>推荐：<br>1015, 1635, 1636, 1671, 1682, 1692, 1704, 1717, 1722, 1726, 1732, 1770, 1821, 1853, 1949, 2019, 2127, 2176, 2228, 2287, 2342, 2374, 2378, 2384, 2411,</p>
-<p>字符串：<br>1488, 1598, 1686, 1706, 1747, 1748, 1750, 1760, 1782, 1790, 1866, 1888, 1896, 1951, 2003, 2121, 2141, 2145, 2159, 2337, 2359, 2372, 2406, 2408,</p>
-<p>贪心：<br>1042, 1065, 1230, 1323, 1477, 1716, 1784,</p>
-<p>图论<br>容易：<br>1161, 1164, 1258, 1175, 1308, 1364, 1776, 1789, 1861, 1939, 1940, 1943, 2075, 2139, 2387, 2394, 2421,<br>不易：<br>1041, 1062, 1158, 1172, 1201, 1275, 1718, 1734, 1751, 1904, 1932, 2173, 2175, 2296,<br>网络流：<br>1087, 1273, 1698, 1815, 2195,<br>匹配：<br>1274, 1422, 1469, 1719, 2060, 2239,<br>Euler：<br>1237, 1637, 1394, 2230,<br>推荐：<br>2049, 2186,</p>
-<p>计算几何<br>容易：<br>1319, 1654, 1673, 1675, 1836, 2074, 2137, 2318,<br>不易：<br>1685, 1687, 1696, 1873, 1901, 2172, 2333,<br>凸包：<br>1113, 1228, 1794, 2007, 2187,</p>
-<p>模拟<br>容易：<br>1006, 1008, 1013, 1016, 1017, 1169, 1298, 1326, 1350, 1363, 1676, 1786, 1791, 1835, 1970, 2317, 2325, 2390,<br>不易：<br>1012, 1082, 1099, 1114, 1642, 1677, 1684, 1886,</p>
-<p>数学<br>容易：<br>1061, 1091, 1142, 1289, 1305, 1306, 1320, 1565, 1665, 1666, 1730, 1894, 1914, 2006, 2042, 2142, 2158, 2174, 2262, 2305, 2321, 2348,<br>不易：<br>1067, 1183, 1430, 1759, 1868, 1942, 2167, 2171, 2327,<br>推荐：<br>1423, 1450, 1640, 1702, 1710, 1721, 1761, 1830, 1930, 2140,</p>
-<p>第一页有几题没写，有机会补上（嗯，忘了就是另一回事了）。</p>
-<p>这个是无聊的时候刷了第一页。。存到博客上当做纪念吧。。</p>
-<p>hdu1000 简单题 难度1<br>计算a+b的值</p>
-<p>hdu1001 简单题 难度1<br>计算1+2+…+n</p>
-<p>hdu1002 简单题 难度1<br>大数a+b</p>
-<p>hdu1003 dp 难度2<br>最大连续子序和</p>
-<p>hdu1004 简单题 难度1<br>求出现次数最多的字符串。<br>方法：<br>简单方法是应用map</p>
-<p>hdu1005 简单题 难度1<br>求f(n)=(A<em>f(n-1)+B</em>f(n-2))mod 7。<br>方法：<br>由于只是对7取余，所以可以(f(n-1)%7,f(n-2)%7)最多49种，会构成长度小于49的循环，之后直接推导即可。也可以用矩阵连乘的方法解决（最简单的矩阵连乘，如果学过，这个方法最简单）。</p>
-<p>hdu1006 数学，枚举 难度6<br>给定一个度数n，问一天24小时，时针，分针和秒针分别与其余两针分离都大于n的时间占一天时间的百分比。注意时间是连续的。<br>方法：<br>这题主要的难度在于找到简便的方法。比较有效的方法就是理解每次所有的针从有重合到再次有重合至多有一段连续的段符合三针分离度大于n。然后枚举每个重合到重合的时间段。<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37814777">http://blog.csdn.net/a601025382s/article/details/37814777</a></p>
-<p>hdu1007 最近点对 难度2<br>求n个点钟最近的点对距离的二分之一。<br>方法：<br>直接套模板。也可以学下分治方法。<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37822795">http://blog.csdn.net/a601025382s/article/details/37822795</a></p>
-<p>hdu1008 简单题 难度1<br>有一架电梯，上一层需要6秒，下一层需要4秒，停一层需要5秒，给定一个序列，问电梯运行完成需要多久。电梯起始位置为0层，最后不需要回到0层。</p>
-<p>hdu1009 简单题 难度1<br>有m个房间，里边有x物资xi，需要yi的y物资交换，现在有n个y物资，问最多能换多少？可以按比例交换，不需要整个房间交换。<br>方法：<br>按价值排序，从优交换即可。</p>
-<p>hdu1010 dfs 难度2<br>走迷宫，路只能走一遍，门只能在特定时间t。<br>方法：<br>特别注意剪枝，<br>1）当时间到t却还没到门口，那之后就不用再走了；<br>2）从起点到门的最短距离为d，那么中间无论怎么乱走都是d+2*x的步数（想想就能知道），即d与t同奇同偶，一开始可以排除大部分情况；<br>3）路的个数比t小，也可以排除</p>
-<p>*hdu1011 树形DP</p>
-<p>hdu1012 简单题 难度1<br>无输入，只要输出0&lt;=n&lt;=9时的所有函数值e即可</p>
-<p>hdu1013 简单题 难度1<br>给定一个数，将这个数的各个位数相加，如此反复，直到数字为个位数为止。</p>
-<p>hdu1014 简单题 难度1<br>方法：<br>思维题，想到只有两数互质才能出现good choice情况，所以只要判断两数是否互质即可。输出用%10d</p>
-<p>hdu1015 枚举/dfs 难度1<br>输入整数n和大写字母字符串，在字符串中找出5个字符，将其转换成1~26的数字，使得公式v-w^2+x^3-y^4+z^5=n。<br>方法：<br>用dfs枚举所有情况，复杂度最高为12^5，这题需要注意的是输出结果取字典数最大的，所以需要先将字符从大到小排序。</p>
-<p>hdu1016 dfs 难度2<br>给定一个数n，将1~n的数构成一个环，使得任意两个相邻的数之和为素数。<br>方法：<br>先预处理出所有两两相加为素数的数对。然后从1开始用dfs枚举下一个数，直到构成环。<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37922231">http://blog.csdn.net/a601025382s/article/details/37922231</a></p>
-<p>hdu1017 枚举 难度1<br>找出所有a,b（0&lt;a&lt;b&lt;n），使得(a^2+b^2 +m)/(ab)是一个整数。<br>方法：<br>枚举所有的a，b即可。注意格式，每两个测试示例之间有一个空行。</p>
-<p>hdu1018 数学 难度1<br>给定整数n(1&lt;=n&lt;=1e7)，求n！的长度。<br>方法：<br>用ans=log10(n!)，ans的整数部分+1就是n！的长度<br>（ans分成整数部分a和小数部分b，那么n!=10^(a+b)=（10^b）*10^a,10^b为整数位为1位的小数，相当于科学技术法，那么长度就是a+1了）。<br>这个方法耗时很长，984MS。。</p>
-<p>hdu1019 数学/最小公倍数 难度1<br>给定n个数，求这n个数的最小公倍数<br>方法：<br>逐个求最小公倍数即可。</p>
-<p>hdu1020 简单题 难度1<br>给定一个大写字母字符串，将字符串中连续的相同字母，装好成kX形式。k表示连续的个数，个数为1时省略k，X为连续的字母。</p>
-<p>hdu1021 简单题/循环 难度1<br>已知F(0) = 7, F(1) = 11, F(n) = F(n-1) + F(n-2) (n&gt;=2)，给定一个整数n，求F(n)是否能被三整除。<br>方法：<br>1.将每个F(i)对3取余，会发现，f(i)会在0,1,2上构成循环。(1,2,0,2,2,1,0,1,)1,2,…发现8个一循环。<br>2.直接矩阵连乘求的。</p>
-<p>hdu1022 堆栈 简单1<br>给定两个字符串a和b，问能否通过堆栈的方式将a变成b<br>方法：<br>直接堆栈即可。注意堆栈要清空。</p>
-<p>hdu1023 dp/卡特兰数 难度2<br>一个栈(无穷大)的进栈序列为1，2，3，…，n，有多少个不同的出栈序列<br>方法：<br>1.dp。dp[i][j]=dp[i-1][j-1]+dp[i-1][j+1]；入栈+出栈共i次，入栈比出栈多j次<br>2.卡特兰数。结果符合卡特兰数规律，可以直接套用卡特兰数公式。<br>结果太大，需要大数处理。也可以直接打表。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37928449">http://blog.csdn.net/a601025382s/article/details/37928449</a></p>
-<p>hdu1024 dp 难度3<br>输入m和n，给出一个n长数字序列。问m个不交叉连续段之和最大为多少。<br>方法：<br>dp。<br>dp[i][j]表示前j个序列数字，找出i段，且a[j]包含在段内时，最大的和。<br>dp[i][j]=max(dp[i][j-1]+a[j],max(dp[i-1][k])+a[j])(0&lt;k&lt;j);<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37931599">http://blog.csdn.net/a601025382s/article/details/37931599</a></p>
-<p>hdu1025 最长上升子序列（dp） 难度2<br>对于两条平行线上的点，求最大的一对一连线，使得所有连线都不相交。<br>方法：<br>根据第一条线的序号从小到大排序，求相对应的第二根线序列的最长上升子序列即可。<br>注意：输出时，一条线的时候用road，多条线的时候用roads<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38032251">http://blog.csdn.net/a601025382s/article/details/38032251</a></p>
-<p>hdu1026 bfs 难度2<br>给定一个迷宫n*m，求从(0,0)到(n-1,m-1)。其中在经典迷宫上加了数字’n’，表示在这个格子中有怪物，需要号n秒去打败才能继续前进。<br>方法：<br>由于在BFS的时候，不是最先到达就是最短时间，所以标志vis[i][j]表示的意义变为到达(i,j)的最短时间。当出现耗时大于vis[i][j]的路径时可以省略。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38034615">http://blog.csdn.net/a601025382s/article/details/38034615</a></p>
-<p>hdu1027 DFS/STL 难度2<br>给定一个序列1,2，…，n作为第一个序列，n长序列共有n!个排列。求字典序排列后，第m个序列。<br>方法：<br>1）由于排列数是n！，所以8个数的排列就必定大于m(1&lt;=m&lt;=10000)了，用DFS找出8个数的前10000种排列即可。其他的n可以通过n=8来推导出来。<br>2）直接使用STL中的函数next_permutation(a,a+n)得到下一个序列。<br>两种方法这题耗时都是15MS，不过第二种写法简便，而第一种对大量数据时比较有效</p>
-<p>hdu1028 母函数/dp 难度2<br>整数划分n。<br>方法：<br>1）母函数。g(x)=(1+x+x^2+…)<em>(1+x^2+x^4+..)</em>…*(1+x^n)，其中x^n的系数就是答案<br>2）dp。dp[i][j]表示将i划分成1~j有多少种方式。dp[i][j]=dp[i]<a href="j%3Ei">i</a>,dp[i][j]=dp[i][j-1]+dp[i-j]<a href="j%3C=i">i</a>;<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38057901">http://blog.csdn.net/a601025382s/article/details/38057901</a></p>
-<p>hdu1029 简单题 难度1<br>求n个数中，出现次数不小于(n+1)/2的数，n为奇数。<br>方法：<br>排序后，直接查找每个数的个数。</p>
-<p>hdu1030 简单题 难度1<br>找出两个数m和n间的距离。<br>方法：<br>我们把上下两个相连的三角形构成的菱形看做一个格，右斜线看做横坐标，有斜线看做纵坐标，也是四个方向(0,-1),(0,1),(-1,0),(1,0)变化，<br>那么就相当于直角坐标了。<br>从(x1,y1)到(x2,y2)，这是斜角坐标，距离dis=abs(x1-x2)+abs(y1-y2);我们还需要考虑菱形中的移动，这个都是一层移动一次。<br>所以答案ans=dis+abs(a-b)=abs(x1-x2)+abs(y1-y2)+abs(a-b)，其中a和b表示各自层数，x1,y1,x2,y2表示两个数所在菱形在斜角坐标系的位置。</p>
-<p>hdu1031 简单题 难度1<br>给定n个人对m间衣服元素的满意度，选择总满意度最大的k件（总满意度相同时选择序号较小的），从大到小输出衣服元素序号。<br>方法：<br>二次排序。</p>
-<p>hdu1032 简单题 难度1<br>给定一个范围[i,j]，问这个范围内最大的循环数。循环数：n是奇数就n=n*3+1,n是偶数就n=n/2，直到n=1，总的操作步数就是循环数。<br>方法：<br>直接暴力求出范围内所有的数的循环数，输出最大的。</p>
-<p>hdu1033 简单题 难度1<br>输入由’A’和’V’组成的字符串。A表示顺时针转90度，V表示逆时针转90度。开始位置(310,420)，方向向右</p>
-<p>hdu1034 简单题 难度1<br>有n个小孩，起始每个小孩都有偶数颗糖果。每次操作，小孩都将自己一半的糖果给右边的孩子，然后奇数糖果的小孩从老师那拿到一颗糖果。<br>问经过多少次操作，每个孩子手中的糖果一样多。<br>方法：<br>模拟操作即可。</p>
-<p>hdu1035 简单题 难度1<br>给定一个n*m的矩阵，矩阵由ESWN字母组成，表示方向。再输入k，表示机器人从矩阵北方第k格进入。每前进一格，机器人根据格子中的字母改变方向。<br>问需要多少时间才能走出矩阵，或者走几步后会陷入几步的循环。<br>方法：<br>模拟走法，用vis[i][j]记录走到(i,j)时花的时间，以及标记走过，用来判断是否成环，以及环长。用num记录已经走过的步数。</p>
-<p>hdu1036 简单题 难度1<br>给定圈数n，总距离d。之后输入队伍编号num，每圈的耗时。求平均每km需要多少时间。<br>注意：格式，%3d表示占3格，%02d表示占两格，不满则前补0。最后的时间四舍五入。</p>
-<p>hdu1037 简单题 难度1<br>输入三个地下通道的高度，问是否有不大于168的，若有输出最前面的一个。</p>
-<p>hdu1038 简单题 难度1<br>给定直径d英寸，圈数r圈，时间t秒，问自行车行驶的距离，以及时速。<br>注意：单位的转换。</p>
-<p>hdu1039 简单题 难度1<br>给定一个字符串，判断是否符合下列规则<br>1）至少存在一个元音<br>2）不存在连续三个元音，也不存在连续三个辅音<br>3）不存在连续两个相同的字母，除了oo和ee</p>
-<p>hdu1040 简单题 难度1<br>给定一个序列，升序排列后输出。<br>方法：<br>直接调用STL中sort方法，时间复杂度nlogn</p>
-<p>hdu1041 简单题 难度1<br>从1,开始，变化规律为0变成10，1变成01,经过n次变换后，问连续的0有多少个。例：1-&gt;01-&gt;1001-&gt;01101001<br>方法：<br>列举前面几次的变换，得到数据0,1,1,3,5,11,21,…发现规律f[i]=f[i-1]+2*f[i-2]，预处理出来，当i=1000时很大，需要大数处理。<br>结果可以打表输出。</p>
-<p>hdu1042 大数 难度2<br>求n！，数据太大，需要大数处理。<br>方法：<br>由于n=10000时，长度达到40000，所以不能一位存储，需要一次存储多位。选5位长度可以避免64位。<br>注意：输出时，需要补齐长度，用%05d</p>
-<p>hdu1043 双向BFS/A<em>算法 难度3<br>给定一个长度为9的序列，表示3</em>3矩阵，由1~8数字和字母x组成。每次操作x都可以与相邻的数字交换，问需要通过怎么样的操作才能使序列变为{1,2,3,4,5,6,7,8，x}<br>方法：<br>1)双向BFS<br>需要通过8个数字的逆序数的奇偶性来特判是否能成功变换得到结果。<br>需要将9个字母的组成的序列转换成数字，表示序列在排列中的第几个，总共360000左右各数，便于哈希。<br>双向bfs，缩短时间，但耗时仍旧很长<br>2）A<em>算法<br>通过估计函数缩短时间的求最短路算法，BFS是A</em>算法中的特例。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38091457">http://blog.csdn.net/a601025382s/article/details/38091457</a></p>
-<p>hdu1044 bfs+状态压缩/bfs+dfs 难度2<br>有一个迷宫，需要在规定时间离开，在离开前尽可能拿到珍宝，问最大能拿到的珍宝价值和为多少。<br>方法：<br>1）bfs+状态压缩<br>将珍宝状态压缩，用l位二进制表示l个珍宝的获取状态，每次获得珍宝时，转换状态。这种方法耗时很高。<br>2）bfs=dfs<br>用bfs找出起点到各个珍宝以及出口的最短路径，找出各个珍宝到其他珍宝和出口的最短路径。<br>然后dfs找出其中价值最高，但耗时不超过时间t的路径。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38116577">http://blog.csdn.net/a601025382s/article/details/38116577</a></p>
-<p>hdu1045 枚举 难度1<br>给定一个n<em>n的矩阵，里边存在墙和路，在路上放尽可能多的炮（能攻击四个方向的所有炮，除了被墙挡住）使得没有炮能攻击到其他炮。<br>方法：<br>枚举t(1&lt;=t&lt;2^(n</em>n))，t转换成二进制，1表示该位置放炮，0表示不放炮，判断是否可以成立，找出最大放炮数。</p>
-<p>hdu1046 简单题 难度1<br>给定n<em>m的格点，问从一个角开始，遍历所有的点一次然后回到起点的最短距离。<br>方法：<br>若n是偶数，我们可以将m的最后一列留出来和n的最下面一行，为了回来，而剩余的段走S形完全遍历；m是偶数时同理，共n</em>m。<br>若都是奇数时，上述走法就不能成立，必须走一次斜线，才能变成上面的情况。共n*m-1+sqrt(2)。</p>
-<p>hdu1047 简单题 难度1<br>大整数加法。</p>
-<p>hdu1048 简单题 难度1<br>将给定的字符串，通过特定编码，转换成另一字符串。</p>
-<p>hdu1049 简单题 难度1<br>一个井深n英寸，一只虫子每分钟爬u英寸，然后休息一分钟，滑下d英寸，问多少分钟后虫子能爬出井。<br>方法：<br>小学数学竞赛题，不断做，不断错，哎，小学的时候不长记性啊。。</p>
-<p>hdu1050 简单题 难度1<br>两个走廊，两边各200各房间，一边编号1,3,5…，现在是从一个房间搬到另一个房间，耗时10分钟，<br>当搬运过程与其他搬运过程公用相同部分走廊时需要分次序搬运，问最少需要耗时多久。<br>方法：<br>找走廊各房间前最大重叠次数就可以了。</p>
-<p>hdu1051 贪心 难度1<br>给定一堆木棍，处理第一根木棍需要准备1分钟，处理时间不记，每根木棍都有长度l和质量w，当下次处理的木棍l’&gt;l且w’&gt;w，则不需要准备时间。求处理所有木棍的时间。</p>
-<p>hdu1052 dp 难度3<br>田忌赛马，胜得200分，平0分，负-200分。已知战斗力，现在需要安排顺序使得得分最高。<br>方法：<br>最开始想用贪心，但后来发现在有很多相等速度马的情况下，很难贪心出来。所以需要用dp。<br>dp[i][j]表示打了i场比赛，用了j匹慢马（从最慢的开始用）和i-j匹快马（从最快的开始用）时的最优成绩。<br>原理：也算是一种变着法的贪心把。我们将国王的马从大到小排序，我们要么用最好的马战胜掉，要么用最差的马顶掉。<br>若不用最差的马还是输了，那最差的马还是要输给别的马，当然用最差的马好；若没有输，那用好马战胜，也用这匹马战胜的效果相同，都比国王剩下的马都强。<br>若不用最好的马去战斗，若不能战胜那肯定不用说是费的；若能战胜，那么肯定也能战胜国王剩余的马，保留这匹马和保留最最好的马的效果一样。<br>dp[i][j]=max(dp[i-1][j]+judge(n-i+j,i-1),dp[i-1][j-1]+judge(j-1,i-1));<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38125045">http://blog.csdn.net/a601025382s/article/details/38125045</a></p>
-<p>hdu1053 哈夫曼树 难度1<br>给定一个字符串，每个字符占8位，求用哈夫曼树编码后的总占位数以及压缩比。<br>方法：<br>哈夫曼树处理时，先找出所有的字符，以及其出现的次数，作为节点，全部加入队列。每次处理是取出现次数最少的两个节点，指向一个新节点，<br>将这个新节点加入队列，直到队列中只剩一个。这样就能原节点和新节点构成一颗二叉树。编码时二叉树左连线编码0，右连线编码1，编码所有连线。<br>那么一个节点的编码就是到根节点所有连线上编码的组合。</p>
-<p>hdu1054 最大匹配 难度2<br>给定一颗树，求最小顶点覆盖。<br>题解：<br>树必定可以划分成二分图，二分图最小顶点覆盖=二分图最大匹配。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/11265531">http://blog.csdn.net/a601025382s/article/details/11265531</a></p>
-<p>*hdu1055 贪心 难度5</p>
-<p>hdu1056 简单题 难度1<br>给定数字a，找出最小的n，使得1/2+1/3+…+1/n大于a。</p>
-<p>hdu1057 模拟题 难度1<br>给定天数n，给定D[0]<del>D[15]给定一个20*20的矩阵，每个格子内有一个0</del>3的数字，表示细菌数。<br>每天，每个格子将加上D[k]，k表示这个格子以及上下左右相邻格子的细菌之和（矩阵外格子算作0个细菌，每格细菌个数不能超过3，不能低于0）。<br>问n天后的细菌情况。</p>
-<p>hdu1058 简单题 难度1<br>将质数因子只有2,3,5或7的数称为谦逊数。现在输入n，输出第n个谦虚数。<br>方法:<br>预处理出所有谦逊数。<br>注意：输出的个数，n是尾数11，12，13时是th，其他尾数是1,2,3的是st，nd，rd。</p>
-<p>hdu1059 多重背包 难度1<br>有6种石头，价值1~6，已知石头的个数，问能够平分成等价值两份。<br>方法：<br>多重背包，可以用做学习多重背包的基础题目。</p>
-<p>hdu1060 数学 难度1<br>给定整数n(1&lt;=n&lt;=1000,000,000)，求n^n的最左边的数字是多少。<br>方法：<br>ans=log10(n^n)=nlog10(n)，将ans分整数部分和小数部分ans-=(LL)ans(其中LL 是__int64，会爆int32)，<br>那么10^ans就是n^n前端，且只有整数部分只有一位的浮点型，答案就是(int)ans;</p>
-<p>hdu1061 数学 难度1<br>给定整数n，求n^n的末尾数字多少。<br>方法：<br>末尾数字只有n的末尾数字有关，且会构成循环，找循环输出即可。</p>
-<p>hdu1062 简单题 难度1<br>输出一行字符串，将每个的字符串逆序输出。<br>注意：用gets读入，要用getchar()接收换行符。空格可能存在前后，单词间空格可能多个，多余空格不能删除</p>
-<p>hdu1063 数学 难度2<br>给定一个浮点型数a，整数n，求a^n，要求不丢失精度。<br>方法：<br>先将小数点去掉，剩下整数，作大数乘法，再加上小数点，增加小数部分不够的零以及删除小数部分后导零。<br>注意：输出结果是整数时，后面不能跟小数点。输出结果小于1时，整数部分的0不输出。</p>
-<p>hdu1064 简单题 难度1<br>输入12个浮点数，求它们的平均值。</p>
-<p>hdu1065 简单题 难度1<br>给定一个坐标(x,y)，一个半圆从原点开始，每年涨50面积，问多少年涨到(x,y)。<br>注意：该题pi=3.1415926，输出后面没有空格。</p>
-<p>hdu1066 数学题 难度3<br>求n！最后一位非零数。</p>
-<p>*hdu1067 哈希+bfs 难度3<br>将整个表哈希，然后BFS，每次走一步。</p>
-<p>hdu1068 最大独立集（二分图匹配） 难度2<br>给定n个人之间的关联，问最大子集，使得子集的所有人都没有相互关联。<br>方法：<br>最大独立集模板题。最大独立集=n-最大匹配。由于本身的图可能不是二分图，所以需要镜像所有点，原有点和镜像点的关系就是二分图。<br>最大匹配为ans，那么最大独立集就是n-ans/2（为本身是二分图的一半）；</p>
-<p>hdu1069 dp 难度1<br>给定n种箱子，每种箱子个数不限，每个箱子三边分别为(xi,yi,zi)，分别表示长宽高，箱子可以旋转使得长宽高交换。<br>两个箱子i，j，只有i.x&gt;j.x&amp;&amp;i.y&gt;j.y，j箱子才能放到i上方，问最高队可以堆叠多高。<br>方法：<br>将一个箱子转换成6种固定长宽高的箱子，然后对箱子以x从小到大排序(x相等时可以根据y来排序)，然后dp。dp[i]表示已第i个箱子为底最高能堆得高度。<br>dp[i]=max(dp[i],dp[k]+e[i].z),(0&lt;=k&lt;i)。</p>
-<p>hdu1070 简单题 难度1<br>超市有n种牛奶，价格pi，体积vi，每天喝200ML牛奶，当盒子中牛奶小于200ML时会被丢弃，当牛奶超过5天时会被丢弃。<br>问最便宜（总价/能够喝的天数）的牛奶，当存在多个价格最小牛奶时，输出体积最大的一个。<br>方法：<br>体积小于200ML的牛奶价格价格计无穷，当体积大于1000ML时计1000MS（超过5天的不能喝）。求出所有单价之后排序。</p>
-<p>hdu1071 数学 难度1<br>已知抛物线顶点P1和直线相交的两个交点P2，P3，求抛物线与直线之间的面积。<br>方法：<br>y=a<em>x^2+b</em>x+c，积分∫y=1/3<em>a</em>x^3+1/2<em>b</em>x^2+c*x。积分求得抛物线[x2,x3]之间的面见，减去P2,P3与横坐标构成的梯形面积就是答案了。</p>
-<p>hdu1072 bfs 难度2<br>一个迷宫里，一个人身上存在定时炸弹，定时6秒，迷宫内存在重置器地点，到达地点后可以将时间重置为6s秒，求最短的时间逃出迷宫，逃不出去输出-1.<br>方法：<br>用key表示各种状态（到达重置器位置时更改状态，因为以前的标识无效了），将到达的重置位置设置为墙（回来这个位置没有意义）。之后就是正常的bfs。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37959971">http://blog.csdn.net/a601025382s/article/details/37959971</a></p>
-<p>hdu1073 字符串 难度1<br>匹配字符串，输出ac,pe,wa三种状态。</p>
-<p>hdu1074 dp+状态压缩 难度2<br>修斯有n(1&lt;=n&lt;=15)个作业要赶， 每个作业都有一个限期和完成需要的时间，当作业超过时限还没有完成的时候，每超过一天，<br>这门课的老师会扣除这门课期末成绩1分。问如何安排作业可以使扣除的分数最少，若存在多种情况，按作业排前的优先，即作业序号字典优先。<br>方法：<br>状态压缩n个作业为i，i在二进制下第j位是1时，表示第j个作业已经被完成，否则没有。<br>之后dp[i].num=min(dp[i].num,dp[k].num+e[j].t)((k|j)==i&amp;&amp;(k&amp;j)==0)<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38277027">http://blog.csdn.net/a601025382s/article/details/38277027</a></p>
-<p>hdu1075 字符串 难度1<br>给定字符串翻译字典，给定一行字符，将这行中存在于字典中的字符串翻译，其余不改变输出。<br>方法：<br>用map映射单词，遍历一行字符，找出字符串后判断map中是否存在后输出。</p>
-<p>hdu1076 简单题 难度1<br>已知y和n，y表示当前是第几年，问之后n个闰年是什么时候。<br>方法：<br>预处理20000个闰年f[i]，二分查找y是第k个，输出f[k+n]。</p>
-<p>*hdu1077 计算几何 难度3<br>用半径为1的渔网捕获尽可能多的鱼。</p>
-<p>hdu1078 dfs 难度2<br>有个n*n的矩阵，每个格子当中有一个体积为e[i][j]的奶酪，一只老鼠从(0,0)位置出发，每次只能往横坐标方向走或者只能往纵坐标方向走，<br>每次至多走k步，下一步位置的奶酪体积必须比上一次的奶酪体积要大。求最多能吃到多少体积的奶酪。<br>方法：<br>用dfs搜索路径，由于每次都只能吃更大的体积的奶酪，所以不会出现回到已经经过位置的情况。可以用数组dp[i][j]保存(i,j)位置最大搜索值，<br>即记忆化，别的方向的搜索搜到这个位置的时候可以直接调用dp[i][j]而不用再次搜索，节约时间，称为记忆化搜索。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38292849">http://blog.csdn.net/a601025382s/article/details/38292849</a></p>
-<p>hdu1079 博弈 难度2<br>亚当和夏娃玩一个游戏，给定一个开始时间y-m-d，轮流进行操作，谁先到达2001-11-4，谁就获胜。<br>每次操作可以前进一天y-m-d+1或者前进一个月y-m+1-d，前进的时间必须合法（在2001-11-4之前且日期合法）。亚当先走，亚当获胜输出YES，否则输出NO。<br>方法：<br>1）找规律也可以，在(b+c)%2==0||b==9&amp;&amp;c==30||b==11&amp;&amp;c==30,的情况都输出YES，否则输出NO。abc表示年月日，<br>2）用到sg函数，找出所有日期的sg函数值，然后判断给定日常的sg函数值是否是0,0则输，不是0则赢。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38298783">http://blog.csdn.net/a601025382s/article/details/38298783</a></p>
-<p>hdu1080 dp 难度2<br>给定两个基因，对比两个基因的相似度。即给定一个表，行列项均为ACTG-，表示基因，表内数字表示行和列对应基因的相似度，-为空。<br>先给定两个字符串表示基因a和b，长度分别为n和m，我们可以在字符串中间加入-，使得两个字符串长度相同；现在问通过加入-，最大的基因相似度是多少？<br>方法：<br>dp[i][j]表示用了a串用了前i个字符，b串用了前j个字符的情况下，得到的最大基因值。答案就是dp[n][m]。<br>由于‘-’不能和‘-’配对，所以可以得出dp公式：<br>dp[i][j]=max(dp[i-1][j-1]+get_num(a[i-1],b[j-1]),dp[i-1][j]+get_num(a[i-1,]’-‘),dp[i][j-1]+get_num(‘-‘,b[j-1]));<br>代码链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38299917">http://blog.csdn.net/a601025382s/article/details/38299917</a></p>
-<p>hdu1081 dp 难度2<br>求一个矩阵的最大子矩阵和。<br>方法：<br>枚举子矩阵高度k和开始行i，我们可以在O(n)时间内求得f序列，f[j]=e[i][j]+…+e[i+k-1][j]（这个预处理sum[i][j]=e[1][j]+..+e[i][j]即可），<br>之后求是f序列的最大连续子序列和了。</p>
-<p>hdu1082 堆栈 难度1<br>已知n个矩阵的行和列，给定一个序列，求根据这个序列构成的矩阵乘法顺序需要的几次矩阵元素相乘。<br>方法：<br>堆栈：当遇到矩阵时，加入栈；当遇到右括号时，将两个矩阵出栈相乘后再压入栈，同时计算乘法次数。</p>
-<p>hdu1083 最大匹配 难度1<br>有p门课程和n个学生，已知选择每门课程的学生，问是否能找到p个不同的学生，使得p门课都有一个不同的学生代表，学生代表必须选择了这门课程。<br>方法：<br>以课程和学生建二分图，求最大匹配，如果最大匹配等于p，那么就能找到要求的p个学生，输出YES；否则不能找到，输出NO。</p>
-<p>hdu1084 简单题 难度1<br>根据做题数以及题目完成时间给定分数。<br>方法：<br>根据做题数和时间排序，用num数组记录各个等级的人数，然后给人确定分数，之后根据编号再排序回来。</p>
-<p>hdu1085 多重背包 难度1<br>已知1,2,5三种硬币的个数，求最小不能组成的价格。<br>方法;<br>令m等于三个硬币的总价值，以m为体积多重背包，最小不能被背包到的点就是答案</p>
-<p>hdu1086 计算几何 难度1<br>判断n条线段的交点个数，相同的交点重复计算。<br>注意：端点相交</p>
-<p>hdu1087 dp 难度1<br>已知一个序列，现在要找一个最大递增子序列。<br>方法：<br>dp[i]表示跳到i位置时最大能得到的分数，dp[i]=max(dp[k])+a<a href="0%3C=k%3Ci">i</a></p>
-<p>hdu1088 模拟题 难度1<br>翻译一个html本文，文本中只出现标签<br>和<hr><br>注意：输出时每行开头没有空格，每行最后没有空格，输入的每个字符之间都有空格或者换行。</p>
-<p>hdu1089 简单题 难度1<br>求a+b。</p>
-<p>hdu1090 简单题 难度1<br>多组输入求a+b。</p>
-<p>hdu1091 简单题 难度1<br>多组输入，求a+b，以0,0输入结尾。</p>
-<p>hdu1092 简单题 难度1<br>求多个数的和。输入0时结束</p>
-<p>hdu1093 简单题 难度1<br>输入测试样例的个数T，输入n，输入n个数，求n个数的和。</p>
-<p>hdu1094 简单题 难度1<br>输入到文本末while(scanf(“%d”,&amp;n)!=EOF),求n个数的和。</p>
-<p>hdu1095 简单题 难度1<br>求a+b，输出的每个测试样例后输出一个空行。</p>
-<p>hdu1096 简单题 难度1<br>求多个数的和，每个测试样例之后输出一个空行。</p>
-<p>hdu1097 简单题 难度1<br>求a^b的末位数字。</p>
-<p>hdu1098 简单题 难度1<br>输入k，求整数a使得f(x)=5<em>x^13+13</em>x^5+k<em>a</em>x对任意x都是65的倍数。<br>方法：<br>f(x+1)=5*(x+1)^13+13*(x+1)^5+ka*(x+1)=5*(C(13,0)x^13+C(13,1)<em>x^12+…+C(13,0)<em>x^0)+13</em>(C(5,0)<em>x^5+…+C(5,5)x^0)+ka</em>x+ka=<br>f(x)+5</em>C(13,1)<em>x^12+…5</em>C(13,13)+13<em>C(5,1)<em>x^4+13</em>C(5,5)+k</em>a,对65取余，f(x+1)=13+5+ka=18+ka，是65的倍数。枚举a=1<del>65，<br>找到a使得a<em>k+18是65的倍数，若不存在输出no（a=66,（a</em>k+18）%65=（a%65*k%65+18）%65，等效于a=1，所以只用枚举1</del>65）。</p>
-<p>hdu1099 数学 难度2<br>有n种彩票，现在要集齐所有彩票，求买齐彩票的期望购买张数。<br>方法：<br>买第一张自己没有的概率是n/n，买第二张自己没有的概率是(n-1)/n，期望需要买1/((n-1)/n)才能买到；买第三张的概率是(n-2)/n，<br>期望需要买1/((n-2)/n)张。。。所以答案ans=n/n+n/(n-1)+…+n/1;求分母最小公倍数，然后通分，化简，按格式输出。</p>
-<p>hdu1100</p>
-<p>hdu1106 简单题 难度1<br>给定一串由数字组成的串，将其中的5数字当成空格，将倍分割的数字排序输出。要求去掉前导零。<br>方法：<br>c=0,c=c*10+a[i]，直到a[i]为5，将c加入数组，跳过a[i]==5，然后继续前面的步骤即可。最后排序数组输出。</p>
-<p>hdu1108 简单题 难度1<br>球两个数的最小公倍数。<br>方法：<br>lcm=a/gcd(a,b)*b;gcd是最大公约数，用辗转相除法求得，int gcd(int a,int b){return b==0?a:gcd(b,a%b);}</p>
-<p>hdu1172 简单题 难度1<br>电脑随机产生一个四位数，给定n个猜测，每个猜测包括猜测数，个数匹配数，位置匹配数。求是否有唯一符合的四位数，有则输出。<br>方法：<br>暴力枚举所有四位数，跟猜测比较，查看个数匹配数和位置匹配数是否相等。</p>
-<p>hdu1173 简单题 难度1<br>给定一个直角坐标系，上面有n个点，表示金矿，现在要选择一个位置建设基地，使得到达所有金矿的距离和最小。距离计算：fabs(x1-x2)+fabs(y1+y2)。<br>方法：<br>分别求n个坐标的横坐标和纵坐标的中位数即可。（根据中位数的性质，这样的位置距离最短）</p>
-<p>hdu1174 计算几何 难度1<br>CS中的警匪对战，已知匪的位置三维坐标，身高和头半径；警的位置，身高，头半径和子弹飞行方向向量。问是否能击毙匪。<br>方法：<br>这题比较水，不用判子弹方向是否是背离匪的脑袋的。只要计算出子弹的所在直线，匪脑袋的圆心，计算圆心到直线的距离和匪脑袋的半径比较即可。</p>
-<p>hdu1175 模拟题 难度1<br>连连看，给定一个n*m矩阵，0表示空格，其他数表示特定图片，只有两个方块相同，转弯次数小于等于2次才能消掉。给定位置(x1,y1)和(x2,y2)，<br>问两个位置上的方块能否消掉。<br>方法：<br>先用a[i][j][k]数组记录一个点各个方向上的连续0的个数。然后分情况讨论，一种没有转弯，直接判断中间是否有足够的连续0即可；<br>其余的算一种，这个又分两种，一种是走Z型，一种走N型，Z型则向左右两边延展找出所有可以用过的位置，然后再相同纵坐标的时候判断上下是否连通即可，<br>N型同理。</p>
-<p>hdu1180 bfs 难度2<br>一张n<em>m地图上，S表示起点，T表示终点，</em>表示墙，.表示路，|表示竖着的梯子，能让在该位置的上下方向通行，-表示横着的梯子。每分钟梯子会变化一次，<br>从横到竖或者从竖到横。一个人只能上下左右移动，每次耗时1分钟；人不会在梯子上停留，经过梯子达到梯子对面只用一分钟。<br>可以在原地停留，问从起点到终点最少需要多少时间。<br>方法：<br>bfs，在碰到梯子时判断梯子位置情况，不同相则时间多加一，位置变为梯子对面。</p>
-<p>hdu2007 简单题 难度1<br>球一段区间[n,m]内所有偶数的平方和以及所有奇数的立方和。<br>方法：<br>预处理数所有的e[i],e[i].x表示所有小大于i的偶数的平分和，e[i].y表示所有不大于i的奇数的立方和，答案就是e[m].x-e[n-1].x和e[m].y-e[n-1].y;<br>注意：0的情况(这题好像没有0的数据)，以及n&gt;m</p>
-<p>hdu2008 简单题 难度1<br>统计n长的实数序列中，负数，零和正数的个数。</p>
-<p>hdu2009 简单题 难度1<br>数列的第一项为n，以后各项为前一项的平方根，求数列的前m项的和。</p>
-<p>hdu2010 简单题 难度1<br>“水仙花数”是指一个三位数，它的各位数字的立方和等于其本身。求给定范围内的所有水仙花数。<br>方法：<br>先预处理出所有的水仙花数，然后根据范围输出。</p>
-<p>hdu2011 简单题 难度1<br>求多项式1 - 1/2 + 1/3 - 1/4 + 1/5 - 1/6 + …的前n项的和。</p>
-<p>hdu2012 简单题 难度1<br>对于表达式n^2+n+41，当n在（x,y）范围内取整数值时（包括x,y）(-39&lt;=x&lt;y&lt;=50)，判定该表达式的值是否都为素数。</p>
-<p>hdu2013 简单题 难度1<br>每天吃掉一半多一个的桃子，n天后剩下一个桃子，问开始有几个桃子。</p>
-<p>hdu2014 简单题 难度1<br>给定n个分数。去掉一个最高分，一个最低分，然后求平均数。</p>
-<p>hdu2015 简单题 难度1<br>有一个长度为n(n&lt;=100)的数列，该数列定义为从2开始的递增有序偶数，<br>现在要求你按照顺序每m个数求出一个平均值，如果最后不足m个，则以实际数量求平均值。</p>
-<p>hdu2016 简单题 难度1<br>输入n(n&lt;100)个数，找出其中最小的数，将它与最前面的数交换后输出这些数。</p>
-<p>hdu2017 简单题 难度1<br>对于给定的一个字符串，统计其中数字字符出现的次数。</p>
-<p>hdu2018 简单题 难度1<br>有一头母牛，它每年年初生一头小母牛。每头小母牛从第四个年头开始，每年年初也生一头小母牛。请编程实现在第n年的时候，共有多少头母牛？</p>
-<p>hdu2019 简单题 难度1<br>有n(n&lt;=100)个整数，已经按照从小到大顺序排列好，现在另外给一个整数x，请将该数插入到序列中，并使新的序列仍然有序</p>
-<p>hdu2020 简单题 难度1<br>输入n(n&lt;=100)个整数，按照绝对值从大到小排序后输出。题目保证对于每一个测试实例，所有的数的绝对值都不相等。</p>
-<p>hdu2021 简单题 难度1<br>已知人民币一共有100元、50元、10元、5元、2元和1元六种，用最少的人民币张数凑n元。<br>方法：<br>贪心，大的纸币先用。</p>
-<p>hdu2022 简单题 难度1<br>求n*m矩阵中绝对值最大的数。</p>
-<p>hdu2023 简单题 难度1<br>假设一个班有n(n&lt;=50)个学生，每人考m(m&lt;=5)门课，求每个学生的平均成绩和每门课的平均成绩，并输出各科成绩均大于等于平均成绩的学生数量。</p>
-<p>hdu2024 简单题 难度1<br>输入一个字符串，判断其是否是C的合法标识符。即字符串以字母或者下划线开头，由数字，下划线和字母组成的合法。</p>
-<p>hdu2025 简单题 难度1<br>对于输入的每个字符串，查找其中的最大字母，在该字母后面插入字符串“(max)”。</p>
-<p>hdu2026 简单题 难度1<br>输入一个英文句子，将每个单词的第一个字母改成大写字母。</p>
-<p>hdu2027 简单题 难度1<br>统计每个元音字母在字符串中出现的次数。</p>
-<p>hdu2028 简单题 难度1<br>求n个数的最小公倍数。<br>方法：<br>lcm=a/gcd(a,b)*b;gcd()为求最大公约数，int gcd(int a,int b){return b==0?a:gcd(b,a%b);}</p>
-<p>hdu2029 简单题 难度1<br>“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。请写一个程序判断读入的字符串是否是“回文”。</p>
-<p>hdu2030 简单题 难度1<br>统计给定文本文件中汉字的个数。<br>方法：<br>汉字机内码在计算机的表达方式的描述是，使用二个字节，每个字节最高位一位为1。<br>计算机中， 补码第一位是符号位， 1 表示为 负数，<br>所以 汉字机内码的每个字节表示的十进制数都是负数<br>统计输入字符串含有几个汉字，只只需求出字符串中小于0的字符有几个，将它除以2就得到答案</p>
-<p>hdu2031 简单题 难度1<br>输入一个十进制数N，将它转换成R进制数输出。</p>
-<p>hdu2032 简单题 难度1<br>输出n层杨辉三角。</p>
-<p>hdu2033 简单题 难度1<br>求两个时间的和。</p>
-<p>hdu2034 简单题 难度1<br>集合A-B，即输出A集合中与B集合重复的数。</p>
-<p>hdu2035 简单题 难度1<br>求A^B的最后三位数表示的整数。</p>
-<p>hdu2036 简单题 难度1<br>求n个点围成的多边形面积。</p>
-<p>hdu2037 dp 难度1<br>给定n个电视节目的开始时间和结束时间，问最多可以完整的看完的节目的个数、<br>方法：<br>根据开始时间排序，dp[i]=max(dp[i],dp[j]+1)(e[j].y&lt;=e[i].x,0&lt;=j&lt;i)</p>
-<p>hdu2039 简单题 难度1<br>给定三条边，请你判断一下能不能组成一个三角形。<br>注意：输入的是实数。</p>
-<p>hdu2040 简单题 难度1<br>判断a和b是否是亲合数，亲和数就是a的所有真约数（不含本身的约数）和等于b，b的所有真约数和等于a。</p>
-<p>hdu2041 dp 难度1<br>一开始在第一个台阶上，之后每次可以走一个台阶或者两个台阶，问走到n有多少种方法。<br>方法：<br>dp[i]=dp[i-1]+dp<a href="n%3E=i%3E=3">i-2</a></p>
-<p>hdu2042 简单题 难度1<br>每次羊减少一半少一只，n次后剩余3只，问开始有几只。</p>
-<p>hdu2043 简单题 难度1<br>判断难度是否安全。</p>
-<p>hdu2044 简单题 难度1<br>有一只经过训练的蜜蜂只能爬向右侧相邻的蜂房，不能反向爬行。请编程计算蜜蜂从蜂房a爬到蜂房b的可能路线数。<br>注意：会超出int，需要用__int64</p>
-<p>hdu2045 dp 难度1<br>给一行的n个格子染色，共有3种颜色，相邻格子不能同色，头尾不能同色，问有多少种染色方式。<br>方法：<br>dp[i][j]，当j=0时表示i长格子的染色方法，j=1时表示，相邻格子染色不同，头尾染色相同的情况。<br>dp[i][0]=dp[i-1][0]+dp[i-1][1]*2;dp[i][1]=dp[i-1][0];<br>注意：会超出int</p>
-<p>hdu2046 dp 难度1<br>在2<em>n的方格内放1</em>2的长条，有多少种放法。<br>方法：<br>dp[i]=dp[i-1]+dp[i-2];dp[i]表示2*i的格子的放法数。有两种放法：1是最后一个放竖条，那么有f[i-1]，最后两格放两格横条，那么有f[i-2]种。<br>注意:超出int，dp[0]=1;</p>
-<p>hdu2047 dp 难度1<br>由EOF三个字符组成的n长字符串，不出现O和O连续的情况有多少种？<br>方法：<br>dp[i][j]，j=0表示结尾不是O的合法情况数，j=1表示结尾为O的合法情况数，ans=f[n][0]+f[n][1]。<br>dp[i][0]=(dp[i-1][0]+dp[i-1][1])*2,dp[i][1]=dp[i-1][0]。<br>注意：超出int</p>
-<p>hdu2048 数学 难度1<br>有n个人，每个人在一张彩票写上自己的名字，放入盒子，然后每个人抽取一张，抽到自己名字的彩票则中奖，问都不中奖的概率。<br>方法：<br>用错排公式求得不中奖的情况数，即n长序列的排列，所有的元素都不在自己原来的位置上的情况数。然后求得概率。<br>dp[i]=(dp[i-1]+dp[i-2])<em>(n-1)或者ans=n!</em>(1/2!-1/3!+1/4!-1/5!+…+(-1)^n/n!)</p>
-<p>hdu2049 数学 难度1<br>n对新人新婚,给每位新娘打扮得几乎一模一样,并盖上大大的红盖头随机坐成一排;<br>然后,让各位新郎寻找自己的新娘.每人只准找一个,并且不允许多人找一个.问有m个新郎找错，有多少种可能方式。<br>方法:<br>也是错排，现用组合数找出n-m个人，之后剩余的m个就是错排了。ans=c[n][n-m]<em>dp[m]；dp[m]=(m-1)</em>(dp[m-1]+dp[m-2]);</p>
-<p>hdu2050 简单题 难度1<br>问n条&lt;型的折线最多能将平面分成几个部分。<br>方法：<br>找规律，每次增加一条折线所增加的区域数等于这条折线与原来的线至多有几个交点。<br>dp[1]=2,dp[i]=dp[i-1]+4*(i-1)+1;</p>
-<p>hdu2051 简单题 难度1<br>将10进制数转换成二进制。</p>
-<p>hdu2052 简单题 难度1<br>给定n和m，用+，-，|输出长宽为n和m的矩形。</p>
-<p>hdu2053 简单题 难度1<br>输入一个整数n表示n次操作，第i次操作，将第i*k(k=1,2,….)个的灯开关（从开到关，或者从关到开），问n次操作后，第n个灯的状态。<br>方法：<br>求n的因子个数即可。欧拉函数。</p>
-<p>hdu2054 简单题 难度1<br>判断两个数是否相等。<br>注意：可能是实数；数字很大，长度要开1e5，用字符串读入；可能存在前导零和后导零。</p>
-<p>hdu2055 简单题 难度1<br>输入一个字母x和数字y，f(x)表示，当x为小写字母时f(x)=-(x-‘a’+1),否则f(x)=x-‘A’+1;求f(x)+y;</p>
-<p>hdu2056 简单题 难度1<br>求两个矩阵相交区域的面积。<br>注意：用printf(“%.2f\n”,0.0);过了，用printf(“%.2f\n”,0);挂了。。</p>
-<p>hdu2057 简单题 难度1<br>两个16进制数相加。</p>
-<p>hdu2058 简单题 难度1<br>已知n和m，对于序列1,2,3…,n。找出所有和等于m的连续子序列。<br>方法：<br>起点为i,长度为k的连续序列，和为(2*i+k-1)<em>k/2=m,枚举k(1&lt;=k&lt;=sqrt(m</em>2))即可。</p>
-<p>hdu2059 dp 难度2<br>龟兔赛跑，兔子固定移动速度vr，乌龟使用电瓶车v1，蹬电瓶车v2；电瓶车每次只能开c，路上有n个供电站，位置pi，充电时间t。<br>问乌龟是否可以赢兔子。<br>方法：<br>dp[i]表示到达pi（即之后要在pi充电）的最短时间，dp[i]=min(dp[k]+路上耗时)。</p>
-<p>hdu4908</p>
-<p>hdu4910 数学 难道3<br>输入一个正整数n(n&lt;=1e18)，输出所有的i相乘并对n取余所得的值。（gcd(i,n)==1，1&lt;=i&lt;=n）<br>方法：<br>找规律：将n分解分所有质因子相乘，质因子2个数为a，其余质因子个数为b，ans=(a==0?a:a-1)+b;当ans&lt;2时结果为n-1，否则结果为1.<br>需要的知识：Miller_Rabin算法+线性筛<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38379971">http://blog.csdn.net/a601025382s/article/details/38379971</a></p>
-
+          <p><center>学习ACM必看的法典，可以参考一下！</center></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/1045386572.html">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -820,7 +408,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://lbamyr.top/posts/undefined.html">
+    <link itemprop="mainEntityOfPage" href="http://lbamyr.top/posts/643646675.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/qianshou.png">
@@ -833,7 +421,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/undefined.html" class="post-title-link" itemprop="url">日程表</a>
+          <a href="/posts/643646675.html" class="post-title-link" itemprop="url">日程表</a>
         </h2>
 
         <div class="post-meta-container">
@@ -843,12 +431,34 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-01-16 19:21:19 / Modified: 19:54:07" itemprop="dateCreated datePublished" datetime="2021-01-16T19:21:19+08:00">2021-01-16</time>
+      <time title="Created: 2021-01-16 19:21:19" itemprop="dateCreated datePublished" datetime="2021-01-16T19:21:19+08:00">2021-01-16</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-19 16:41:21" itemprop="dateModified" datetime="2021-01-19T16:41:21+08:00">2021-01-19</time>
+      </span>
 
   
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>165</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
 </div>
 
         </div>
@@ -924,10 +534,26 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 16:30:13" itemprop="dateModified" datetime="2021-01-19T16:30:13+08:00">2021-01-19</time>
+        <time title="Modified: 2021-01-19 16:44:09" itemprop="dateModified" datetime="2021-01-19T16:44:09+08:00">2021-01-19</time>
       </span>
 
   
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="Symbols count in article">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">Symbols count in article: </span>
+      <span>390</span>
+    </span>
+    <span class="post-meta-item" title="Reading time">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">Reading time &asymp;</span>
+      <span>1 mins.</span>
+    </span>
 </div>
 
         </div>
@@ -937,15 +563,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <a id="more"></a>
-
-<p>这个博客用于记录我和老婆在一起成长的点点滴滴，希望我和她能够长长久久。</p>
-<p><a target="_blank" rel="noopener" href="https://imgchr.com/i/sD5n6s"><img src="https://s3.ax1x.com/2021/01/16/sD5n6s.jpg" alt="sD5n6s.jpg"></a></p>
-<h1 id="在一起的第一天"><a href="#在一起的第一天" class="headerlink" title="在一起的第一天"></a>在一起的第一天</h1><p>​        我还依稀记得那年冬天，我是如此的激动以至于上课都无法静下心来，因为我知道我即将向她表白。她的名字叫梅玉柔，名字好听把，嘿嘿。第一次和她做同桌我就爱上了她，她在我的心里早已无可替代。也正是因为如此我决定今天明天晚上必须要向她表白，不管结果如何，我都不能留下遗憾。</p>
-<h1 id="早上"><a href="#早上" class="headerlink" title="早上"></a>早上</h1><p>​        也许是上天给了我们机会，第二天的上午我们就偶然相遇，一起迟到去学校，我也正好有了机会和你说：今天晚上别走，我有话要和你说。你当时停顿了一会，就说好呀。然后又继续询问我要干啥，我心里笑而不语，就和你说：晚上你就知道了，哈哈！</p>
-<p>​        白天上课我也听不进去，因为一直在脑海里遐想今晚该如何向你表白。我坐在最后一排，时不时就会在座位上看看你在干嘛，害怕有其他的男生会找你聊天，害怕你会拒绝我的表白，我的内心早已被你掳走。</p>
-<h1 id="中午"><a href="#中午" class="headerlink" title="中午"></a>中午</h1><p>​       未完待续……..</p>
-
+          <p><center>记录美好的回忆啦！</center></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/410452635.html">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -1000,6 +626,20 @@
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">李彬</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="Symbols count total">36k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="Reading time total">33 mins.</span>
+  </span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div><script defer src="/lib/three.js"></script><script defer src="/lib/lines.js"></script><script defer src="/lib/sphere.js"></script><script defer src="/lib/waves.js"></script>
