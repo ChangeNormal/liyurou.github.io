@@ -1,335 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>日程表</title>
+    <url>/posts/643646675.html</url>
+    <content><![CDATA[<hr>
+<h1 id="上午"><a href="#上午" class="headerlink" title="上午"></a>上午</h1><p>7：00 ~ 8：30         吃早饭，背单词</p>
+<p>8：30 ~ 12：00         开始学习数学+数据结构</p>
+<h1 id="下午"><a href="#下午" class="headerlink" title="下午"></a>下午</h1><p>12：00 ~2：00        吃饭+和老婆聊天娱乐</p>
+<p>2：00 ~ 6：00        学习数学+计算机组成原理（操作系统）</p>
+<h1 id="晚上"><a href="#晚上" class="headerlink" title="晚上"></a>晚上</h1><p>6：00 ~ 8：30        吃饭+和老婆聊天娱乐</p>
+<p>8：30 ~ 11：00      学习数学+数据结构（操作系统）</p>
+<p>11：00 ~ 12：00       和老婆聊天娱乐</p>
+<p>12：00 ~ ………..      睡觉</p>
+]]></content>
+      <tags>
+        <tag>计划</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第1日—Lgorithm-learning</title>
+    <url>/posts/1561858360.html</url>
+    <content><![CDATA[<a id="more"></a>
 
+<h1 id="数据类型范围（int-long-long-int-用于解决数值溢出问题）"><a href="#数据类型范围（int-long-long-int-用于解决数值溢出问题）" class="headerlink" title="数据类型范围（int,long long int,用于解决数值溢出问题）"></a>数据类型范围（int,long long int,用于解决数值溢出问题）</h1><p><strong>有符号整数类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型名称</th>
+<th>字节数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>signed char</td>
+<td>1</td>
+<td>-2^7(-128) ~ 2^7-1(127)</td>
+</tr>
+<tr>
+<td>short int 或 short</td>
+<td>2</td>
+<td>-2^15(-32 768) ~ 2^15-1(32 767)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
+</tr>
+<tr>
+<td>long int 或 long</td>
+<td>4</td>
+<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
+</tr>
+<tr>
+<td>long long int 或 long long</td>
+<td>8</td>
+<td>-2^63(-9.2233720368548e+18) ~ 2^63-1(9.2233720368548e+18)</td>
+</tr>
+</tbody></table>
+<p><strong>无符号整数类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型名称</th>
+<th>字节数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>unsigned char</td>
+<td>1</td>
+<td>0 ~ 2^8-1(255)</td>
+</tr>
+<tr>
+<td>unsigned short int 或 unsigned short</td>
+<td>2</td>
+<td>0 ~ 2^16-1(65 535)</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>4</td>
+<td>0 ~ 2^32-1(4 294 967 295)</td>
+</tr>
+<tr>
+<td>unsigned long int 或 unsigned long</td>
+<td>4</td>
+<td>0 ~ 2^32-1(4 294 967 295)</td>
+</tr>
+<tr>
+<td>unsigned long long int 或 unsigned long long</td>
+<td>8</td>
+<td>0 ~ 2^64-1(1.844674407371e+19)</td>
+</tr>
+</tbody></table>
+<p><strong>浮点类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型名称</th>
+<th>字节数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4</td>
+<td>-/+3.4e38（精确到6位小数）</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>-/+1.7e308（精确到15位小数）</td>
+</tr>
+<tr>
+<td>long double</td>
+<td>12</td>
+<td>-/+1.19e4932（精确到18位小数）</td>
+</tr>
+</tbody></table>
+<p>原文请查看：<a href="https://blog.csdn.net/weixin_42856843/article/details/81989737">https://blog.csdn.net/weixin_42856843/article/details/81989737</a></p>
+<h2 id="计算时输入溢出"><a href="#计算时输入溢出" class="headerlink" title="计算时输入溢出"></a>计算时输入溢出</h2><p>例如：P22 例题2-2   3n+1 </p>
+<p>解题方法：将 int 改为 long long / long long int</p>
+<p>（注意：在使用long long int /long long 时输入应当改为%lld）</p>
+<h2 id="计算时结果溢出"><a href="#计算时结果溢出" class="headerlink" title="计算时结果溢出"></a>计算时结果溢出</h2><p>例如：P25 例题2-4   阶乘之和 </p>
+<p>解题方法：每步计算都对n进行取余，每步取模运算</p>
+<p>（要计算只包含<u>加法，减法和乘法的整数表达式除以正整数n的余数</u>，可以在每步计算之后<u>对n取余，结果不变</u>）</p>
+<h2 id="常量定义"><a href="#常量定义" class="headerlink" title="常量定义"></a>常量定义</h2><p><code>const int MOD = 1000000;  #引自P24 例题2-4</code></p>
+<p>改善程序的可读性，方便修改</p>
+<h2 id="如何迅速判断程序是否溢出"><a href="#如何迅速判断程序是否溢出" class="headerlink" title="如何迅速判断程序是否溢出"></a>如何迅速判断程序是否溢出</h2><p>通过“输入中间变量”法来验证</p>
+<h1 id="计时函数clock"><a href="#计时函数clock" class="headerlink" title="计时函数clock()"></a>计时函数clock()</h1><p>头文件：#include&lt;time.h&gt;</p>
+<p>输出：printf(“Time used = %.2f\n”,(double)clock() / CLOCKS_PER_SEC);</p>
+<p>说明：该函数返回程序目前为止运行的时间，这个时间除以常数CLOCKS_PER_SEC之后得到的值以“秒”为单位。</p>
+<h2 id="clock-计时函数"><a href="#clock-计时函数" class="headerlink" title="clock()计时函数"></a>clock()计时函数</h2><p>clock()是C/C++中的计时函数，而与其相关的数据类型是clock_t。在MSDN中，查得对clock函数定义如下：<br>clock_t clock(void) ;<br>简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）；若挂钟时间不可取，则返回-1。其中clock_t是用来保存时间的数据类型。<br>在time.h文件中，我们可以找到对clock_t()的定义：</p>
+<p>#ifndef _CLOCK_T_DEFINED</p>
+<p><em>typedef long clock_t;</em></p>
+<p><em>#define _CLOCK_T_DEFINED</em><br><em>#endif</em></p>
+<p>很明显，clock_t是一个长整形数。在time.h文件中，还定义了一个常量CLOCKS_PER_SEC，它用来表示一秒钟会有多少个时钟计时单元，其定义如下：<br>#define CLOCKS_PER_SEC ((clock_t)1000)</p>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算一段程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">8</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"> <span class="number">9</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">10</span>     &#123;</span><br><span class="line"><span class="number">11</span>         i++;</span><br><span class="line"><span class="number">12</span>     &#125;</span><br><span class="line"><span class="number">13</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">14</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is: &quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">15</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">16</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">17</span> &#125;</span><br><span class="line"><span class="number">18</span> <span class="comment">//注释在:VC++6.0中可以用CLK_TCK替换CLOCKS_PER_SEC。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算整个程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">12</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">13</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">14</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line">   <span class="comment">//两个写在一起</span></span><br><span class="line"> <span class="number">1</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">4</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 5 </span>&#123;</span><br><span class="line"> <span class="number">6</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"><span class="number">12</span>     <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">13</span>     &#123;</span><br><span class="line"><span class="number">14</span>         i++;</span><br><span class="line"><span class="number">15</span>     &#125;</span><br><span class="line"><span class="number">16</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">17</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">18</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">19</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">20</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">21</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>部分内容引自：<a href="https://www.cnblogs.com/didiaodidiao/p/9194702.html">https://www.cnblogs.com/didiaodidiao/p/9194702.html</a></p>
+<h1 id="C语言输出格式要求"><a href="#C语言输出格式要求" class="headerlink" title="C语言输出格式要求"></a>C语言输出格式要求</h1><p>例如题目让输出 025，而有时候系统默认输出 25，此时我们可以用 %03d或%.3d 使 25 输出为 025。</p>
+<h1 id="算法竞赛中的输入输出框架"><a href="#算法竞赛中的输入输出框架" class="headerlink" title="算法竞赛中的输入输出框架"></a>算法竞赛中的输入输出框架</h1><p>例：P27 例题 2-5 数据统计</p>
+<p>由于整数的个数是不确定的，我们得解决这个问题。</p>
+<p>直接上代码：<code>while(scanf(&quot;%d&quot;,&amp;x) == 1)</code></p>
+<p>解释：scanf函数是有返回值的，它返回的是成功输入的变量个数，当输入结束时，scanf函数无法再次读取x，将返回0.</p>
+<p>但是细心的小伙伴运行程序后肯定会发现按下“Enter”键后未显示结果。并不是程序运行太慢，其实程序是在等待输入。scanf函数的输入格式：空格，TAB和回车符都是无关紧要的，所以按下Ente键并不意味着输入的结束。那么我们该如何告诉程序输入结束了呢？</p>
+<p>提示：在Windows下，输入完毕后先按下Enter键，再按Ctrl+Z键，最后再按Enter键，即可结束输入。在Linux下，输入完毕后按Ctrl+D键即可结束输入。</p>
+<h1 id="文件输入输出讨论"><a href="#文件输入输出讨论" class="headerlink" title="文件输入输出讨论"></a>文件输入输出讨论</h1><p>​       相信在上一节我提到的scanf函数的使用方式后，大家也会发现每次调试程序的时候并不方便，尤其是上面的例题中程序值是溢出的，那也就意味着我们会进行多次的调试。</p>
+<p>​       Good means：用文件——把输入数据保存在文件中，输出数据也保存在文件中。这样，事先把输入的数据保存在命令行中，就不必每次重新输入了；</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>最简单的方法是使用输入输出重定向，只需在main函数的入口处加入以下两条语句：</p>
+<p><code>freopen(&quot;input.txt&quot;,&quot;r&quot;,stdin);</code></p>
+<p><code>freopen(&quot;output.txt&quot;,&quot;w&quot;,stdout);</code></p>
+<p>上面两条语句使得scanf从文件input.txt读入，printf写入文件output.txt。</p>
+<p>（注意：参赛之前仔细阅读文件读写的相关规定，有的竞赛只允许访问文件，但不允许用freopen这样的重定向方式读写文件）</p>
+]]></content>
+      <tags>
+        <tag>算法竞赛入门经典（刘汝佳）</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>李彬爱梅玉柔</title>
+    <url>/posts/410452635.html</url>
+    <content><![CDATA[<a id="more"></a>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+<p>这个博客用于记录我和老婆在一起成长的点点滴滴，希望我和她能够长长久久。</p>
+<p><a href="https://imgchr.com/i/sD5n6s"><img src="https://s3.ax1x.com/2021/01/16/sD5n6s.jpg" alt="sD5n6s.jpg"></a></p>
+<h1 id="在一起的第一天"><a href="#在一起的第一天" class="headerlink" title="在一起的第一天"></a>在一起的第一天</h1><p>​        我还依稀记得那年冬天，我是如此的激动以至于上课都无法静下心来，因为我知道我即将向她表白。她的名字叫梅玉柔，名字好听把，嘿嘿。第一次和她做同桌我就爱上了她，她在我的心里早已无可替代。也正是因为如此我决定今天明天晚上必须要向她表白，不管结果如何，我都不能留下遗憾。</p>
+<h1 id="早上"><a href="#早上" class="headerlink" title="早上"></a>早上</h1><p>​        也许是上天给了我们机会，第二天的上午我们就偶然相遇，一起迟到去学校，我也正好有了机会和你说：今天晚上别走，我有话要和你说。你当时停顿了一会，就说好呀。然后又继续询问我要干啥，我心里笑而不语，就和你说：晚上你就知道了，哈哈！</p>
+<p>​        白天上课我也听不进去，因为一直在脑海里遐想今晚该如何向你表白。我坐在最后一排，时不时就会在座位上看看你在干嘛，害怕有其他的男生会找你聊天，害怕你会拒绝我的表白，我的内心早已被你掳走。</p>
+<h1 id="中午"><a href="#中午" class="headerlink" title="中午"></a>中午</h1><p>​       未完待续……..</p>
+]]></content>
+      <tags>
+        <tag>这里来记录我们的爱情</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ACM训练指导</title>
+    <url>/posts/1045386572.html</url>
+    <content><![CDATA[<a id="more"></a>
 
-<link rel="stylesheet" href="/css/main.css">
-
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic%7CLabster+Two:300,300italic,400,400italic,700,700italic%7CAmita:300,300italic,400,400italic,700,700italic%7CMontserrat:300,300italic,400,400italic,700,700italic%7CPT+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-
-<script class="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lbamyr.top","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
-  </script>
-<meta name="description" content="学习ACM必看的法典，可以参考一下！">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ACM训练指导">
-<meta property="og:url" content="http://lbamyr.top/posts/1045386572.html">
-<meta property="og:site_name" content="Libin and Meiyurou&#39;s Blog">
-<meta property="og:description" content="学习ACM必看的法典，可以参考一下！">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-18T02:46:35.000Z">
-<meta property="article:modified_time" content="2021-01-19T10:16:12.924Z">
-<meta property="article:author" content="李彬">
-<meta property="article:tag" content="算法训练">
-<meta name="twitter:card" content="summary">
-
-
-<link rel="canonical" href="http://lbamyr.top/posts/1045386572.html">
-
-
-<script class="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'en'
-  };
-</script><script src="https://cdn.jsdelivr.net/npm/exif-js@2/exif.min.js"></script><script src="/lib/fireworks.js"></script>
-<title>ACM训练指导 | Libin and Meiyurou's Blog</title>
-  
-
-
-
-
-  <noscript>
-  <style>
-  body { margin-top: 2rem; }
-
-  .use-motion .menu-item,
-  .use-motion .sidebar,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header {
-    visibility: visible;
-  }
-
-  .use-motion .header,
-  .use-motion .site-brand-container .toggle,
-  .use-motion .footer { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle,
-  .use-motion .custom-logo-image {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line {
-    transform: scaleX(1);
-  }
-
-  .search-pop-overlay, .sidebar-nav { display: none; }
-  .sidebar-panel { display: block; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
-  <div class="headband"></div>
-
-  <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar" role="button">
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-        <span class="toggle-line"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <i class="logo-line"></i>
-      <h1 class="site-title">Libin and Meiyurou's Blog</h1>
-      <i class="logo-line"></i>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">4</span></a></li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off" maxlength="80"
-           placeholder="Searching..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close" role="button">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div class="search-result-container no-result">
-  <div class="search-result-icon">
-    <i class="fa fa-spinner fa-pulse fa-5x"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-        
-  
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
-  <aside class="sidebar">
-
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
-      <ul class="sidebar-nav">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <div class="sidebar-panel-container">
-        <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%BC%80%E5%A7%8B%E5%85%A5%E9%97%A8%E5%90%A7%EF%BC%81%EF%BC%8815%E5%A4%A9%EF%BC%8C53%E9%A2%98%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">第一阶段：开始入门吧！（15天，53题）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5%EF%BC%9A%E6%88%91%E8%A6%81%E5%AD%A6%E7%AE%97%E6%B3%95%EF%BC%81%EF%BC%8812%E5%A4%A9%EF%BC%8C31%E9%A2%98%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">第二阶段：我要学算法！（12天，31题）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5%EF%BC%9Aacm%E6%97%A0%E5%BA%95%E6%B4%9E%E5%95%8A%EF%BC%81%EF%BC%8810%E5%A4%A9%EF%BC%8C18%E9%A2%98%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">第三阶段：acm无底洞啊！（10天，18题）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5%EF%BC%9A%E5%A4%A7%E5%AE%B6%E8%87%AA%E5%AD%A6%E5%90%A7%EF%BC%81%EF%BC%88%E6%90%9EACM%E5%90%8C%E5%AD%A6%E8%AF%B7%E7%9C%8B%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">第四阶段：大家自学吧！（搞ACM同学请看）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link"><span class="nav-number">5.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM%E8%BF%9B%E9%98%B6"><span class="nav-number">5.0.1.</span> <span class="nav-text">ACM进阶</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%84%BF%E6%AF%8F%E4%B8%80%E4%BD%8D%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AB%9E%E8%B5%9B%E7%88%B1%E5%A5%BD%E8%80%85%E6%8C%91%E6%88%98%E6%9E%81%E9%99%90%EF%BC%81"><span class="nav-number">6.</span> <span class="nav-text">愿每一位程序设计竞赛爱好者挑战极限！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number">7.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-2"><span class="nav-number">8.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9D%AD%E7%94%B5ACM%E9%A2%98%E7%9B%AE%E5%88%86%E7%B1%BB"><span class="nav-number">9.</span> <span class="nav-text">杭电ACM题目分类</span></a></li></ol></div>
-        </div>
-        <!--/noindex-->
-
-        <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="李彬"
-      src="/images/qianshou.png">
-  <p class="site-author-name" itemprop="name">李彬</p>
-  <div class="site-description" itemprop="description">这是属于我们两个的小站</div>
-</div>
-<div class="site-state-wrap site-overview-item animated">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">4</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
-        <span class="site-state-item-name">tags</span>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author site-overview-item animated">
-      <span class="links-of-author-item">
-        <a href="https://github.com/liyurou" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;liyurou" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-  </div>
-  <div class="cc-license site-overview-item animated" itemprop="license">
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
-  </div>
-
-
-
-        </div>
-      </div>
-    </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
-
-    
-  <div class="back-to-top" role="button">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-  <div class="reading-progress-bar"></div>
-
-  <a href="https://github.com/liyurou" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
-
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
-
-
-    <div class="main-inner post posts-expand">
-
-
-  
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://lbamyr.top/posts/1045386572.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/qianshou.png">
-      <meta itemprop="name" content="李彬">
-      <meta itemprop="description" content="这是属于我们两个的小站">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Libin and Meiyurou's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          ACM训练指导
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2021-01-18 10:46:35" itemprop="dateCreated datePublished" datetime="2021-01-18T10:46:35+08:00">2021-01-18</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-01-19 18:16:12" itemprop="dateModified" datetime="2021-01-19T18:16:12+08:00">2021-01-19</time>
-      </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>32k</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>29 mins.</span>
-    </span>
-</div>
-
-            <div class="post-description"><center>学习ACM必看的法典，可以参考一下！</center></div>
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <a id="more"></a>
-
-<p>引用自：<a target="_blank" rel="noopener" href="http://blog.csdn.net/liuqiyao_01/article/details/8477645">杭电acm阶段之理工大版</a></p>
-<p>​       <a target="_blank" rel="noopener" href="http://blog.csdn.net/ecjtu_yuweiwei/article/details/9257443">杭电ACM题目分类</a></p>
-<p>​       <a target="_blank" rel="noopener" href="http://www.pythontip.com/acm/problemCategory">各大OJ题目分类</a></p>
-<p>​       <a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38612635">hdu（杭电oj）第一页题目题解</a></p>
-<p>​      <a target="_blank" rel="noopener" href="http://blog.csdn.net/u010020581/article/details/8794117">ACM牛人给的新手建议（这个也是转载的）</a></p>
+<p>引用自：<a href="http://blog.csdn.net/liuqiyao_01/article/details/8477645">杭电acm阶段之理工大版</a></p>
+<p>​       <a href="http://blog.csdn.net/ecjtu_yuweiwei/article/details/9257443">杭电ACM题目分类</a></p>
+<p>​       <a href="http://www.pythontip.com/acm/problemCategory">各大OJ题目分类</a></p>
+<p>​       <a href="http://blog.csdn.net/a601025382s/article/details/38612635">hdu（杭电oj）第一页题目题解</a></p>
+<p>​      <a href="http://blog.csdn.net/u010020581/article/details/8794117">ACM牛人给的新手建议（这个也是转载的）</a></p>
 <p>供留备查用</p>
 <p>杭电acm阶段之理工大版</p>
 <p>[671原创，欢迎转载]</p>
 <p>以下题均为杭电acm网页的题号</p>
-<p>首页<a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/">http://acm.hdu.edu.cn/</a></p>
-<p>题库入口<a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/listproblem.php?vol=1">http://acm.hdu.edu.cn/listproblem.php?vol=1</a></p>
-<p>帮助<a target="_blank" rel="noopener" href="http://acm.hdu.edu.cn/faq.php?lang=chs">http://acm.hdu.edu.cn/faq.php?lang=chs</a></p>
+<p>首页<a href="http://acm.hdu.edu.cn/">http://acm.hdu.edu.cn/</a></p>
+<p>题库入口<a href="http://acm.hdu.edu.cn/listproblem.php?vol=1">http://acm.hdu.edu.cn/listproblem.php?vol=1</a></p>
+<p>帮助<a href="http://acm.hdu.edu.cn/faq.php?lang=chs">http://acm.hdu.edu.cn/faq.php?lang=chs</a></p>
 <p>此次培训主要锻炼同学们的算法学习，更重要的是锻炼同学们的自学能力，对于我们学计算机的同学来说，自学能力是关键，如果你真的指望从老师那里学到什么的话。。。。。。。。。。。。。。。（千万不能告诉老师）所以，这个真的很关键，首先是独立思考问题的能力，我对同学们的要求是，如果同学们遇到了问题，至少独立思考1小时以上，才可以从网上找答案或者问别人。不要觉得这个要求苛刻，其实这是一个很好的方法，如果一遇到不会的难题就上网查或者问，虽然可能题一会做出来了，但是下次碰见还是不会，甚至根本就没有印象。我经常调试程序3、4个小时以上，偶尔都会有10个小时的调试。这对同学们日后的学习很有帮助。</p>
 <h1 id="第一阶段：开始入门吧！（15天，53题）"><a href="#第一阶段：开始入门吧！（15天，53题）" class="headerlink" title="第一阶段：开始入门吧！（15天，53题）"></a>第一阶段：开始入门吧！（15天，53题）</h1><p>一．输入输出练习（2天，10题）</p>
 <p>​     1000、1089—1096、1001</p>
@@ -359,7 +220,7 @@
 <h1 id="第四阶段：大家自学吧！（搞ACM同学请看）"><a href="#第四阶段：大家自学吧！（搞ACM同学请看）" class="headerlink" title="第四阶段：大家自学吧！（搞ACM同学请看）"></a>第四阶段：大家自学吧！（搞ACM同学请看）</h1><p>大家从网站自己找资料，看一下acm的分类情况，然后根据自己的想法，以及组队安排，来对某一知识点优先学习，但是尽量在半年内还是保持全面发展，半年后在开始分方向。</p>
 <p>^o^</p>
 <p>刷完这些题的同学~~~按照POJ分类来刷下初级。</p>
-<p>传送门：<a target="_blank" rel="noopener" href="http://blog.csdn.net/liuqiyao_01/article/details/8477801">http://blog.csdn.net/liuqiyao_01/article/details/8477801</a></p>
+<p>传送门：<a href="http://blog.csdn.net/liuqiyao_01/article/details/8477801">http://blog.csdn.net/liuqiyao_01/article/details/8477801</a></p>
 <p>刷完初级，省赛铜牌就没问题了~~~</p>
 <p>​                                                                         671敬上</p>
 <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h3 id="ACM进阶"><a href="#ACM进阶" class="headerlink" title="ACM进阶"></a>ACM进阶</h3><p>一位高手的建议：<br>一般要做到50行以内的程序不用调试、100行以内的二分钟内调试成功.</p>
@@ -367,7 +228,7 @@
 <p>第一阶段：练经典常用算法，下面的每个算法给我打上十到二十遍，同时自己精简代码，因为太常用，所以要练到写时不用想，10-15分钟内打完，甚至关掉显示器都可以把程序打出来。</p>
 <p>1.最短路(Floyd、Dijstra,BellmanFord)<br>2.最小生成树(先写个prim,kruscal要用并查集，不好写)<br>3.大数（高精度）加减乘除<br>4.二分查找. (代码可在五行以内)<br>5.叉乘、判线段相交、然后写个凸包.<br>6.BFS、DFS,同时熟练hash表(要熟，要灵活,代码要简)<br>7.数学上的有：辗转相除（两行内），线段交点、多角形面积公式.<br>\8. 调用系统的qsort, 技巧很多，慢慢掌握.<br>\9. 任意进制间的转换</p>
 <p>第二阶段：练习复杂一点，但也较常用的算法。<br>如：<br>\1. 二分图匹配（匈牙利），最小路径覆盖<br>\2. 网络流，最小费用流。<br>\3. 线段树.<br>\4. 并查集。<br>\5. 熟悉动态规划的各个典型：LCS、最长递增子串、三角剖分、记忆化dp<br>6.博弈类算法。博弈树，二进制法等。<br>7.最大团，最大独立集。<br>8.判断点在多边形内。<br>\9. 差分约束系统.<br>\10. 双向广度搜索、A*算法，最小耗散优先.</p>
-<p>第三阶段：<br>  前两个阶段是打基础，第三阶段是锻炼在比赛中可以快速建立模型、想新算法。这就要平时多做做综合的题型了。<br>\1. 把oibh上的论文看看（大概几百篇的，我只看了一点点，呵呵）。<br>\2. 平时扫扫zoj上的难题啦，别老做那些不用想的题.(中大acm的版主经常说我挑简单的来做:-P )<br>\3. 多参加网上的比赛，感受一下比赛的气氛，评估自己的实力.<br>\4. 一道题不要过了就算，问一下人，有更好的算法也打一下。<br>\5. 做过的题要记好 :-)<br>下面转自：<a target="_blank" rel="noopener" href="http://hi.baidu.com/wilworld/blog/item/88b1b844d37e4049500ffe6a.html">http://hi.baidu.com/wilworld/blog/item/88b1b844d37e4049500ffe6a.html</a></p>
+<p>第三阶段：<br>  前两个阶段是打基础，第三阶段是锻炼在比赛中可以快速建立模型、想新算法。这就要平时多做做综合的题型了。<br>\1. 把oibh上的论文看看（大概几百篇的，我只看了一点点，呵呵）。<br>\2. 平时扫扫zoj上的难题啦，别老做那些不用想的题.(中大acm的版主经常说我挑简单的来做:-P )<br>\3. 多参加网上的比赛，感受一下比赛的气氛，评估自己的实力.<br>\4. 一道题不要过了就算，问一下人，有更好的算法也打一下。<br>\5. 做过的题要记好 :-)<br>下面转自：<a href="http://hi.baidu.com/wilworld/blog/item/88b1b844d37e4049500ffe6a.html">http://hi.baidu.com/wilworld/blog/item/88b1b844d37e4049500ffe6a.html</a></p>
 <p>算法书有很多可以参考：</p>
 <p>1、Concrete Mathematics — A Foundation For Computer Science<br>Ronald L. Graham ， Donald E. Knuth ， Oren Patashnik<br>　　这本书《具体数学》是Stanford计算机系的教材（1970 年开始给研究生授课），书的内容是Knuth的巨著TAOCP第一章的扩展，涉及了计算机科学领域内几乎所有可能遇到的数学知识。书中许多经典问题的解答比目前广泛流传的解法更易懂。对于提高大家的数学修养有很大帮助。</p>
 <p>2、Introduction to Algorithms<br>Thomas H. Cormen ，Charles E. Leiserson ，Ronald L. Rivest ，Clifford Stein<br>　　《算法导论》MIT计算机系的经典算法教材。作者Rivest获得过ACM Turing Award，牛！本书内容全面，语言通俗，很适合大家入门。</p>
@@ -487,8 +348,8 @@
 <p>hdu1003 dp 难度2<br>最大连续子序和</p>
 <p>hdu1004 简单题 难度1<br>求出现次数最多的字符串。<br>方法：<br>简单方法是应用map</p>
 <p>hdu1005 简单题 难度1<br>求f(n)=(A<em>f(n-1)+B</em>f(n-2))mod 7。<br>方法：<br>由于只是对7取余，所以可以(f(n-1)%7,f(n-2)%7)最多49种，会构成长度小于49的循环，之后直接推导即可。也可以用矩阵连乘的方法解决（最简单的矩阵连乘，如果学过，这个方法最简单）。</p>
-<p>hdu1006 数学，枚举 难度6<br>给定一个度数n，问一天24小时，时针，分针和秒针分别与其余两针分离都大于n的时间占一天时间的百分比。注意时间是连续的。<br>方法：<br>这题主要的难度在于找到简便的方法。比较有效的方法就是理解每次所有的针从有重合到再次有重合至多有一段连续的段符合三针分离度大于n。然后枚举每个重合到重合的时间段。<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37814777">http://blog.csdn.net/a601025382s/article/details/37814777</a></p>
-<p>hdu1007 最近点对 难度2<br>求n个点钟最近的点对距离的二分之一。<br>方法：<br>直接套模板。也可以学下分治方法。<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37822795">http://blog.csdn.net/a601025382s/article/details/37822795</a></p>
+<p>hdu1006 数学，枚举 难度6<br>给定一个度数n，问一天24小时，时针，分针和秒针分别与其余两针分离都大于n的时间占一天时间的百分比。注意时间是连续的。<br>方法：<br>这题主要的难度在于找到简便的方法。比较有效的方法就是理解每次所有的针从有重合到再次有重合至多有一段连续的段符合三针分离度大于n。然后枚举每个重合到重合的时间段。<br>题解链接：<a href="http://blog.csdn.net/a601025382s/article/details/37814777">http://blog.csdn.net/a601025382s/article/details/37814777</a></p>
+<p>hdu1007 最近点对 难度2<br>求n个点钟最近的点对距离的二分之一。<br>方法：<br>直接套模板。也可以学下分治方法。<br>题解链接：<a href="http://blog.csdn.net/a601025382s/article/details/37822795">http://blog.csdn.net/a601025382s/article/details/37822795</a></p>
 <p>hdu1008 简单题 难度1<br>有一架电梯，上一层需要6秒，下一层需要4秒，停一层需要5秒，给定一个序列，问电梯运行完成需要多久。电梯起始位置为0层，最后不需要回到0层。</p>
 <p>hdu1009 简单题 难度1<br>有m个房间，里边有x物资xi，需要yi的y物资交换，现在有n个y物资，问最多能换多少？可以按比例交换，不需要整个房间交换。<br>方法：<br>按价值排序，从优交换即可。</p>
 <p>hdu1010 dfs 难度2<br>走迷宫，路只能走一遍，门只能在特定时间t。<br>方法：<br>特别注意剪枝，<br>1）当时间到t却还没到门口，那之后就不用再走了；<br>2）从起点到门的最短距离为d，那么中间无论怎么乱走都是d+2*x的步数（想想就能知道），即d与t同奇同偶，一开始可以排除大部分情况；<br>3）路的个数比t小，也可以排除</p>
@@ -497,19 +358,19 @@
 <p>hdu1013 简单题 难度1<br>给定一个数，将这个数的各个位数相加，如此反复，直到数字为个位数为止。</p>
 <p>hdu1014 简单题 难度1<br>方法：<br>思维题，想到只有两数互质才能出现good choice情况，所以只要判断两数是否互质即可。输出用%10d</p>
 <p>hdu1015 枚举/dfs 难度1<br>输入整数n和大写字母字符串，在字符串中找出5个字符，将其转换成1~26的数字，使得公式v-w^2+x^3-y^4+z^5=n。<br>方法：<br>用dfs枚举所有情况，复杂度最高为12^5，这题需要注意的是输出结果取字典数最大的，所以需要先将字符从大到小排序。</p>
-<p>hdu1016 dfs 难度2<br>给定一个数n，将1~n的数构成一个环，使得任意两个相邻的数之和为素数。<br>方法：<br>先预处理出所有两两相加为素数的数对。然后从1开始用dfs枚举下一个数，直到构成环。<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37922231">http://blog.csdn.net/a601025382s/article/details/37922231</a></p>
+<p>hdu1016 dfs 难度2<br>给定一个数n，将1~n的数构成一个环，使得任意两个相邻的数之和为素数。<br>方法：<br>先预处理出所有两两相加为素数的数对。然后从1开始用dfs枚举下一个数，直到构成环。<br>题解链接：<a href="http://blog.csdn.net/a601025382s/article/details/37922231">http://blog.csdn.net/a601025382s/article/details/37922231</a></p>
 <p>hdu1017 枚举 难度1<br>找出所有a,b（0&lt;a&lt;b&lt;n），使得(a^2+b^2 +m)/(ab)是一个整数。<br>方法：<br>枚举所有的a，b即可。注意格式，每两个测试示例之间有一个空行。</p>
 <p>hdu1018 数学 难度1<br>给定整数n(1&lt;=n&lt;=1e7)，求n！的长度。<br>方法：<br>用ans=log10(n!)，ans的整数部分+1就是n！的长度<br>（ans分成整数部分a和小数部分b，那么n!=10^(a+b)=（10^b）*10^a,10^b为整数位为1位的小数，相当于科学技术法，那么长度就是a+1了）。<br>这个方法耗时很长，984MS。。</p>
 <p>hdu1019 数学/最小公倍数 难度1<br>给定n个数，求这n个数的最小公倍数<br>方法：<br>逐个求最小公倍数即可。</p>
 <p>hdu1020 简单题 难度1<br>给定一个大写字母字符串，将字符串中连续的相同字母，装好成kX形式。k表示连续的个数，个数为1时省略k，X为连续的字母。</p>
 <p>hdu1021 简单题/循环 难度1<br>已知F(0) = 7, F(1) = 11, F(n) = F(n-1) + F(n-2) (n&gt;=2)，给定一个整数n，求F(n)是否能被三整除。<br>方法：<br>1.将每个F(i)对3取余，会发现，f(i)会在0,1,2上构成循环。(1,2,0,2,2,1,0,1,)1,2,…发现8个一循环。<br>2.直接矩阵连乘求的。</p>
 <p>hdu1022 堆栈 简单1<br>给定两个字符串a和b，问能否通过堆栈的方式将a变成b<br>方法：<br>直接堆栈即可。注意堆栈要清空。</p>
-<p>hdu1023 dp/卡特兰数 难度2<br>一个栈(无穷大)的进栈序列为1，2，3，…，n，有多少个不同的出栈序列<br>方法：<br>1.dp。dp[i][j]=dp[i-1][j-1]+dp[i-1][j+1]；入栈+出栈共i次，入栈比出栈多j次<br>2.卡特兰数。结果符合卡特兰数规律，可以直接套用卡特兰数公式。<br>结果太大，需要大数处理。也可以直接打表。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37928449">http://blog.csdn.net/a601025382s/article/details/37928449</a></p>
-<p>hdu1024 dp 难度3<br>输入m和n，给出一个n长数字序列。问m个不交叉连续段之和最大为多少。<br>方法：<br>dp。<br>dp[i][j]表示前j个序列数字，找出i段，且a[j]包含在段内时，最大的和。<br>dp[i][j]=max(dp[i][j-1]+a[j],max(dp[i-1][k])+a[j])(0&lt;k&lt;j);<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37931599">http://blog.csdn.net/a601025382s/article/details/37931599</a></p>
-<p>hdu1025 最长上升子序列（dp） 难度2<br>对于两条平行线上的点，求最大的一对一连线，使得所有连线都不相交。<br>方法：<br>根据第一条线的序号从小到大排序，求相对应的第二根线序列的最长上升子序列即可。<br>注意：输出时，一条线的时候用road，多条线的时候用roads<br>题解链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38032251">http://blog.csdn.net/a601025382s/article/details/38032251</a></p>
-<p>hdu1026 bfs 难度2<br>给定一个迷宫n*m，求从(0,0)到(n-1,m-1)。其中在经典迷宫上加了数字’n’，表示在这个格子中有怪物，需要号n秒去打败才能继续前进。<br>方法：<br>由于在BFS的时候，不是最先到达就是最短时间，所以标志vis[i][j]表示的意义变为到达(i,j)的最短时间。当出现耗时大于vis[i][j]的路径时可以省略。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38034615">http://blog.csdn.net/a601025382s/article/details/38034615</a></p>
+<p>hdu1023 dp/卡特兰数 难度2<br>一个栈(无穷大)的进栈序列为1，2，3，…，n，有多少个不同的出栈序列<br>方法：<br>1.dp。dp[i][j]=dp[i-1][j-1]+dp[i-1][j+1]；入栈+出栈共i次，入栈比出栈多j次<br>2.卡特兰数。结果符合卡特兰数规律，可以直接套用卡特兰数公式。<br>结果太大，需要大数处理。也可以直接打表。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/37928449">http://blog.csdn.net/a601025382s/article/details/37928449</a></p>
+<p>hdu1024 dp 难度3<br>输入m和n，给出一个n长数字序列。问m个不交叉连续段之和最大为多少。<br>方法：<br>dp。<br>dp[i][j]表示前j个序列数字，找出i段，且a[j]包含在段内时，最大的和。<br>dp[i][j]=max(dp[i][j-1]+a[j],max(dp[i-1][k])+a[j])(0&lt;k&lt;j);<br>题解链接：<a href="http://blog.csdn.net/a601025382s/article/details/37931599">http://blog.csdn.net/a601025382s/article/details/37931599</a></p>
+<p>hdu1025 最长上升子序列（dp） 难度2<br>对于两条平行线上的点，求最大的一对一连线，使得所有连线都不相交。<br>方法：<br>根据第一条线的序号从小到大排序，求相对应的第二根线序列的最长上升子序列即可。<br>注意：输出时，一条线的时候用road，多条线的时候用roads<br>题解链接：<a href="http://blog.csdn.net/a601025382s/article/details/38032251">http://blog.csdn.net/a601025382s/article/details/38032251</a></p>
+<p>hdu1026 bfs 难度2<br>给定一个迷宫n*m，求从(0,0)到(n-1,m-1)。其中在经典迷宫上加了数字’n’，表示在这个格子中有怪物，需要号n秒去打败才能继续前进。<br>方法：<br>由于在BFS的时候，不是最先到达就是最短时间，所以标志vis[i][j]表示的意义变为到达(i,j)的最短时间。当出现耗时大于vis[i][j]的路径时可以省略。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38034615">http://blog.csdn.net/a601025382s/article/details/38034615</a></p>
 <p>hdu1027 DFS/STL 难度2<br>给定一个序列1,2，…，n作为第一个序列，n长序列共有n!个排列。求字典序排列后，第m个序列。<br>方法：<br>1）由于排列数是n！，所以8个数的排列就必定大于m(1&lt;=m&lt;=10000)了，用DFS找出8个数的前10000种排列即可。其他的n可以通过n=8来推导出来。<br>2）直接使用STL中的函数next_permutation(a,a+n)得到下一个序列。<br>两种方法这题耗时都是15MS，不过第二种写法简便，而第一种对大量数据时比较有效</p>
-<p>hdu1028 母函数/dp 难度2<br>整数划分n。<br>方法：<br>1）母函数。g(x)=(1+x+x^2+…)<em>(1+x^2+x^4+..)</em>…*(1+x^n)，其中x^n的系数就是答案<br>2）dp。dp[i][j]表示将i划分成1~j有多少种方式。dp[i][j]=dp[i]<a href="j%3Ei">i</a>,dp[i][j]=dp[i][j-1]+dp[i-j]<a href="j%3C=i">i</a>;<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38057901">http://blog.csdn.net/a601025382s/article/details/38057901</a></p>
+<p>hdu1028 母函数/dp 难度2<br>整数划分n。<br>方法：<br>1）母函数。g(x)=(1+x+x^2+…)<em>(1+x^2+x^4+..)</em>…*(1+x^n)，其中x^n的系数就是答案<br>2）dp。dp[i][j]表示将i划分成1~j有多少种方式。dp[i][j]=dp[i]<a href="j%3Ei">i</a>,dp[i][j]=dp[i][j-1]+dp[i-j]<a href="j%3C=i">i</a>;<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38057901">http://blog.csdn.net/a601025382s/article/details/38057901</a></p>
 <p>hdu1029 简单题 难度1<br>求n个数中，出现次数不小于(n+1)/2的数，n为奇数。<br>方法：<br>排序后，直接查找每个数的个数。</p>
 <p>hdu1030 简单题 难度1<br>找出两个数m和n间的距离。<br>方法：<br>我们把上下两个相连的三角形构成的菱形看做一个格，右斜线看做横坐标，有斜线看做纵坐标，也是四个方向(0,-1),(0,1),(-1,0),(1,0)变化，<br>那么就相当于直角坐标了。<br>从(x1,y1)到(x2,y2)，这是斜角坐标，距离dis=abs(x1-x2)+abs(y1-y2);我们还需要考虑菱形中的移动，这个都是一层移动一次。<br>所以答案ans=dis+abs(a-b)=abs(x1-x2)+abs(y1-y2)+abs(a-b)，其中a和b表示各自层数，x1,y1,x2,y2表示两个数所在菱形在斜角坐标系的位置。</p>
 <p>hdu1031 简单题 难度1<br>给定n个人对m间衣服元素的满意度，选择总满意度最大的k件（总满意度相同时选择序号较小的），从大到小输出衣服元素序号。<br>方法：<br>二次排序。</p>
@@ -524,8 +385,8 @@
 <p>hdu1040 简单题 难度1<br>给定一个序列，升序排列后输出。<br>方法：<br>直接调用STL中sort方法，时间复杂度nlogn</p>
 <p>hdu1041 简单题 难度1<br>从1,开始，变化规律为0变成10，1变成01,经过n次变换后，问连续的0有多少个。例：1-&gt;01-&gt;1001-&gt;01101001<br>方法：<br>列举前面几次的变换，得到数据0,1,1,3,5,11,21,…发现规律f[i]=f[i-1]+2*f[i-2]，预处理出来，当i=1000时很大，需要大数处理。<br>结果可以打表输出。</p>
 <p>hdu1042 大数 难度2<br>求n！，数据太大，需要大数处理。<br>方法：<br>由于n=10000时，长度达到40000，所以不能一位存储，需要一次存储多位。选5位长度可以避免64位。<br>注意：输出时，需要补齐长度，用%05d</p>
-<p>hdu1043 双向BFS/A<em>算法 难度3<br>给定一个长度为9的序列，表示3</em>3矩阵，由1~8数字和字母x组成。每次操作x都可以与相邻的数字交换，问需要通过怎么样的操作才能使序列变为{1,2,3,4,5,6,7,8，x}<br>方法：<br>1)双向BFS<br>需要通过8个数字的逆序数的奇偶性来特判是否能成功变换得到结果。<br>需要将9个字母的组成的序列转换成数字，表示序列在排列中的第几个，总共360000左右各数，便于哈希。<br>双向bfs，缩短时间，但耗时仍旧很长<br>2）A<em>算法<br>通过估计函数缩短时间的求最短路算法，BFS是A</em>算法中的特例。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38091457">http://blog.csdn.net/a601025382s/article/details/38091457</a></p>
-<p>hdu1044 bfs+状态压缩/bfs+dfs 难度2<br>有一个迷宫，需要在规定时间离开，在离开前尽可能拿到珍宝，问最大能拿到的珍宝价值和为多少。<br>方法：<br>1）bfs+状态压缩<br>将珍宝状态压缩，用l位二进制表示l个珍宝的获取状态，每次获得珍宝时，转换状态。这种方法耗时很高。<br>2）bfs=dfs<br>用bfs找出起点到各个珍宝以及出口的最短路径，找出各个珍宝到其他珍宝和出口的最短路径。<br>然后dfs找出其中价值最高，但耗时不超过时间t的路径。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38116577">http://blog.csdn.net/a601025382s/article/details/38116577</a></p>
+<p>hdu1043 双向BFS/A<em>算法 难度3<br>给定一个长度为9的序列，表示3</em>3矩阵，由1~8数字和字母x组成。每次操作x都可以与相邻的数字交换，问需要通过怎么样的操作才能使序列变为{1,2,3,4,5,6,7,8，x}<br>方法：<br>1)双向BFS<br>需要通过8个数字的逆序数的奇偶性来特判是否能成功变换得到结果。<br>需要将9个字母的组成的序列转换成数字，表示序列在排列中的第几个，总共360000左右各数，便于哈希。<br>双向bfs，缩短时间，但耗时仍旧很长<br>2）A<em>算法<br>通过估计函数缩短时间的求最短路算法，BFS是A</em>算法中的特例。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38091457">http://blog.csdn.net/a601025382s/article/details/38091457</a></p>
+<p>hdu1044 bfs+状态压缩/bfs+dfs 难度2<br>有一个迷宫，需要在规定时间离开，在离开前尽可能拿到珍宝，问最大能拿到的珍宝价值和为多少。<br>方法：<br>1）bfs+状态压缩<br>将珍宝状态压缩，用l位二进制表示l个珍宝的获取状态，每次获得珍宝时，转换状态。这种方法耗时很高。<br>2）bfs=dfs<br>用bfs找出起点到各个珍宝以及出口的最短路径，找出各个珍宝到其他珍宝和出口的最短路径。<br>然后dfs找出其中价值最高，但耗时不超过时间t的路径。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38116577">http://blog.csdn.net/a601025382s/article/details/38116577</a></p>
 <p>hdu1045 枚举 难度1<br>给定一个n<em>n的矩阵，里边存在墙和路，在路上放尽可能多的炮（能攻击四个方向的所有炮，除了被墙挡住）使得没有炮能攻击到其他炮。<br>方法：<br>枚举t(1&lt;=t&lt;2^(n</em>n))，t转换成二进制，1表示该位置放炮，0表示不放炮，判断是否可以成立，找出最大放炮数。</p>
 <p>hdu1046 简单题 难度1<br>给定n<em>m的格点，问从一个角开始，遍历所有的点一次然后回到起点的最短距离。<br>方法：<br>若n是偶数，我们可以将m的最后一列留出来和n的最下面一行，为了回来，而剩余的段走S形完全遍历；m是偶数时同理，共n</em>m。<br>若都是奇数时，上述走法就不能成立，必须走一次斜线，才能变成上面的情况。共n*m-1+sqrt(2)。</p>
 <p>hdu1047 简单题 难度1<br>大整数加法。</p>
@@ -533,9 +394,9 @@
 <p>hdu1049 简单题 难度1<br>一个井深n英寸，一只虫子每分钟爬u英寸，然后休息一分钟，滑下d英寸，问多少分钟后虫子能爬出井。<br>方法：<br>小学数学竞赛题，不断做，不断错，哎，小学的时候不长记性啊。。</p>
 <p>hdu1050 简单题 难度1<br>两个走廊，两边各200各房间，一边编号1,3,5…，现在是从一个房间搬到另一个房间，耗时10分钟，<br>当搬运过程与其他搬运过程公用相同部分走廊时需要分次序搬运，问最少需要耗时多久。<br>方法：<br>找走廊各房间前最大重叠次数就可以了。</p>
 <p>hdu1051 贪心 难度1<br>给定一堆木棍，处理第一根木棍需要准备1分钟，处理时间不记，每根木棍都有长度l和质量w，当下次处理的木棍l’&gt;l且w’&gt;w，则不需要准备时间。求处理所有木棍的时间。</p>
-<p>hdu1052 dp 难度3<br>田忌赛马，胜得200分，平0分，负-200分。已知战斗力，现在需要安排顺序使得得分最高。<br>方法：<br>最开始想用贪心，但后来发现在有很多相等速度马的情况下，很难贪心出来。所以需要用dp。<br>dp[i][j]表示打了i场比赛，用了j匹慢马（从最慢的开始用）和i-j匹快马（从最快的开始用）时的最优成绩。<br>原理：也算是一种变着法的贪心把。我们将国王的马从大到小排序，我们要么用最好的马战胜掉，要么用最差的马顶掉。<br>若不用最差的马还是输了，那最差的马还是要输给别的马，当然用最差的马好；若没有输，那用好马战胜，也用这匹马战胜的效果相同，都比国王剩下的马都强。<br>若不用最好的马去战斗，若不能战胜那肯定不用说是费的；若能战胜，那么肯定也能战胜国王剩余的马，保留这匹马和保留最最好的马的效果一样。<br>dp[i][j]=max(dp[i-1][j]+judge(n-i+j,i-1),dp[i-1][j-1]+judge(j-1,i-1));<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38125045">http://blog.csdn.net/a601025382s/article/details/38125045</a></p>
+<p>hdu1052 dp 难度3<br>田忌赛马，胜得200分，平0分，负-200分。已知战斗力，现在需要安排顺序使得得分最高。<br>方法：<br>最开始想用贪心，但后来发现在有很多相等速度马的情况下，很难贪心出来。所以需要用dp。<br>dp[i][j]表示打了i场比赛，用了j匹慢马（从最慢的开始用）和i-j匹快马（从最快的开始用）时的最优成绩。<br>原理：也算是一种变着法的贪心把。我们将国王的马从大到小排序，我们要么用最好的马战胜掉，要么用最差的马顶掉。<br>若不用最差的马还是输了，那最差的马还是要输给别的马，当然用最差的马好；若没有输，那用好马战胜，也用这匹马战胜的效果相同，都比国王剩下的马都强。<br>若不用最好的马去战斗，若不能战胜那肯定不用说是费的；若能战胜，那么肯定也能战胜国王剩余的马，保留这匹马和保留最最好的马的效果一样。<br>dp[i][j]=max(dp[i-1][j]+judge(n-i+j,i-1),dp[i-1][j-1]+judge(j-1,i-1));<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38125045">http://blog.csdn.net/a601025382s/article/details/38125045</a></p>
 <p>hdu1053 哈夫曼树 难度1<br>给定一个字符串，每个字符占8位，求用哈夫曼树编码后的总占位数以及压缩比。<br>方法：<br>哈夫曼树处理时，先找出所有的字符，以及其出现的次数，作为节点，全部加入队列。每次处理是取出现次数最少的两个节点，指向一个新节点，<br>将这个新节点加入队列，直到队列中只剩一个。这样就能原节点和新节点构成一颗二叉树。编码时二叉树左连线编码0，右连线编码1，编码所有连线。<br>那么一个节点的编码就是到根节点所有连线上编码的组合。</p>
-<p>hdu1054 最大匹配 难度2<br>给定一颗树，求最小顶点覆盖。<br>题解：<br>树必定可以划分成二分图，二分图最小顶点覆盖=二分图最大匹配。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/11265531">http://blog.csdn.net/a601025382s/article/details/11265531</a></p>
+<p>hdu1054 最大匹配 难度2<br>给定一颗树，求最小顶点覆盖。<br>题解：<br>树必定可以划分成二分图，二分图最小顶点覆盖=二分图最大匹配。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/11265531">http://blog.csdn.net/a601025382s/article/details/11265531</a></p>
 <p>*hdu1055 贪心 难度5</p>
 <p>hdu1056 简单题 难度1<br>给定数字a，找出最小的n，使得1/2+1/3+…+1/n大于a。</p>
 <p>hdu1057 模拟题 难度1<br>给定天数n，给定D[0]<del>D[15]给定一个20*20的矩阵，每个格子内有一个0</del>3的数字，表示细菌数。<br>每天，每个格子将加上D[k]，k表示这个格子以及上下左右相邻格子的细菌之和（矩阵外格子算作0个细菌，每格细菌个数不能超过3，不能低于0）。<br>问n天后的细菌情况。</p>
@@ -553,15 +414,15 @@
 <p>hdu1069 dp 难度1<br>给定n种箱子，每种箱子个数不限，每个箱子三边分别为(xi,yi,zi)，分别表示长宽高，箱子可以旋转使得长宽高交换。<br>两个箱子i，j，只有i.x&gt;j.x&amp;&amp;i.y&gt;j.y，j箱子才能放到i上方，问最高队可以堆叠多高。<br>方法：<br>将一个箱子转换成6种固定长宽高的箱子，然后对箱子以x从小到大排序(x相等时可以根据y来排序)，然后dp。dp[i]表示已第i个箱子为底最高能堆得高度。<br>dp[i]=max(dp[i],dp[k]+e[i].z),(0&lt;=k&lt;i)。</p>
 <p>hdu1070 简单题 难度1<br>超市有n种牛奶，价格pi，体积vi，每天喝200ML牛奶，当盒子中牛奶小于200ML时会被丢弃，当牛奶超过5天时会被丢弃。<br>问最便宜（总价/能够喝的天数）的牛奶，当存在多个价格最小牛奶时，输出体积最大的一个。<br>方法：<br>体积小于200ML的牛奶价格价格计无穷，当体积大于1000ML时计1000MS（超过5天的不能喝）。求出所有单价之后排序。</p>
 <p>hdu1071 数学 难度1<br>已知抛物线顶点P1和直线相交的两个交点P2，P3，求抛物线与直线之间的面积。<br>方法：<br>y=a<em>x^2+b</em>x+c，积分∫y=1/3<em>a</em>x^3+1/2<em>b</em>x^2+c*x。积分求得抛物线[x2,x3]之间的面见，减去P2,P3与横坐标构成的梯形面积就是答案了。</p>
-<p>hdu1072 bfs 难度2<br>一个迷宫里，一个人身上存在定时炸弹，定时6秒，迷宫内存在重置器地点，到达地点后可以将时间重置为6s秒，求最短的时间逃出迷宫，逃不出去输出-1.<br>方法：<br>用key表示各种状态（到达重置器位置时更改状态，因为以前的标识无效了），将到达的重置位置设置为墙（回来这个位置没有意义）。之后就是正常的bfs。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/37959971">http://blog.csdn.net/a601025382s/article/details/37959971</a></p>
+<p>hdu1072 bfs 难度2<br>一个迷宫里，一个人身上存在定时炸弹，定时6秒，迷宫内存在重置器地点，到达地点后可以将时间重置为6s秒，求最短的时间逃出迷宫，逃不出去输出-1.<br>方法：<br>用key表示各种状态（到达重置器位置时更改状态，因为以前的标识无效了），将到达的重置位置设置为墙（回来这个位置没有意义）。之后就是正常的bfs。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/37959971">http://blog.csdn.net/a601025382s/article/details/37959971</a></p>
 <p>hdu1073 字符串 难度1<br>匹配字符串，输出ac,pe,wa三种状态。</p>
-<p>hdu1074 dp+状态压缩 难度2<br>修斯有n(1&lt;=n&lt;=15)个作业要赶， 每个作业都有一个限期和完成需要的时间，当作业超过时限还没有完成的时候，每超过一天，<br>这门课的老师会扣除这门课期末成绩1分。问如何安排作业可以使扣除的分数最少，若存在多种情况，按作业排前的优先，即作业序号字典优先。<br>方法：<br>状态压缩n个作业为i，i在二进制下第j位是1时，表示第j个作业已经被完成，否则没有。<br>之后dp[i].num=min(dp[i].num,dp[k].num+e[j].t)((k|j)==i&amp;&amp;(k&amp;j)==0)<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38277027">http://blog.csdn.net/a601025382s/article/details/38277027</a></p>
+<p>hdu1074 dp+状态压缩 难度2<br>修斯有n(1&lt;=n&lt;=15)个作业要赶， 每个作业都有一个限期和完成需要的时间，当作业超过时限还没有完成的时候，每超过一天，<br>这门课的老师会扣除这门课期末成绩1分。问如何安排作业可以使扣除的分数最少，若存在多种情况，按作业排前的优先，即作业序号字典优先。<br>方法：<br>状态压缩n个作业为i，i在二进制下第j位是1时，表示第j个作业已经被完成，否则没有。<br>之后dp[i].num=min(dp[i].num,dp[k].num+e[j].t)((k|j)==i&amp;&amp;(k&amp;j)==0)<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38277027">http://blog.csdn.net/a601025382s/article/details/38277027</a></p>
 <p>hdu1075 字符串 难度1<br>给定字符串翻译字典，给定一行字符，将这行中存在于字典中的字符串翻译，其余不改变输出。<br>方法：<br>用map映射单词，遍历一行字符，找出字符串后判断map中是否存在后输出。</p>
 <p>hdu1076 简单题 难度1<br>已知y和n，y表示当前是第几年，问之后n个闰年是什么时候。<br>方法：<br>预处理20000个闰年f[i]，二分查找y是第k个，输出f[k+n]。</p>
 <p>*hdu1077 计算几何 难度3<br>用半径为1的渔网捕获尽可能多的鱼。</p>
-<p>hdu1078 dfs 难度2<br>有个n*n的矩阵，每个格子当中有一个体积为e[i][j]的奶酪，一只老鼠从(0,0)位置出发，每次只能往横坐标方向走或者只能往纵坐标方向走，<br>每次至多走k步，下一步位置的奶酪体积必须比上一次的奶酪体积要大。求最多能吃到多少体积的奶酪。<br>方法：<br>用dfs搜索路径，由于每次都只能吃更大的体积的奶酪，所以不会出现回到已经经过位置的情况。可以用数组dp[i][j]保存(i,j)位置最大搜索值，<br>即记忆化，别的方向的搜索搜到这个位置的时候可以直接调用dp[i][j]而不用再次搜索，节约时间，称为记忆化搜索。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38292849">http://blog.csdn.net/a601025382s/article/details/38292849</a></p>
-<p>hdu1079 博弈 难度2<br>亚当和夏娃玩一个游戏，给定一个开始时间y-m-d，轮流进行操作，谁先到达2001-11-4，谁就获胜。<br>每次操作可以前进一天y-m-d+1或者前进一个月y-m+1-d，前进的时间必须合法（在2001-11-4之前且日期合法）。亚当先走，亚当获胜输出YES，否则输出NO。<br>方法：<br>1）找规律也可以，在(b+c)%2==0||b==9&amp;&amp;c==30||b==11&amp;&amp;c==30,的情况都输出YES，否则输出NO。abc表示年月日，<br>2）用到sg函数，找出所有日期的sg函数值，然后判断给定日常的sg函数值是否是0,0则输，不是0则赢。<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38298783">http://blog.csdn.net/a601025382s/article/details/38298783</a></p>
-<p>hdu1080 dp 难度2<br>给定两个基因，对比两个基因的相似度。即给定一个表，行列项均为ACTG-，表示基因，表内数字表示行和列对应基因的相似度，-为空。<br>先给定两个字符串表示基因a和b，长度分别为n和m，我们可以在字符串中间加入-，使得两个字符串长度相同；现在问通过加入-，最大的基因相似度是多少？<br>方法：<br>dp[i][j]表示用了a串用了前i个字符，b串用了前j个字符的情况下，得到的最大基因值。答案就是dp[n][m]。<br>由于‘-’不能和‘-’配对，所以可以得出dp公式：<br>dp[i][j]=max(dp[i-1][j-1]+get_num(a[i-1],b[j-1]),dp[i-1][j]+get_num(a[i-1,]’-‘),dp[i][j-1]+get_num(‘-‘,b[j-1]));<br>代码链接：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38299917">http://blog.csdn.net/a601025382s/article/details/38299917</a></p>
+<p>hdu1078 dfs 难度2<br>有个n*n的矩阵，每个格子当中有一个体积为e[i][j]的奶酪，一只老鼠从(0,0)位置出发，每次只能往横坐标方向走或者只能往纵坐标方向走，<br>每次至多走k步，下一步位置的奶酪体积必须比上一次的奶酪体积要大。求最多能吃到多少体积的奶酪。<br>方法：<br>用dfs搜索路径，由于每次都只能吃更大的体积的奶酪，所以不会出现回到已经经过位置的情况。可以用数组dp[i][j]保存(i,j)位置最大搜索值，<br>即记忆化，别的方向的搜索搜到这个位置的时候可以直接调用dp[i][j]而不用再次搜索，节约时间，称为记忆化搜索。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38292849">http://blog.csdn.net/a601025382s/article/details/38292849</a></p>
+<p>hdu1079 博弈 难度2<br>亚当和夏娃玩一个游戏，给定一个开始时间y-m-d，轮流进行操作，谁先到达2001-11-4，谁就获胜。<br>每次操作可以前进一天y-m-d+1或者前进一个月y-m+1-d，前进的时间必须合法（在2001-11-4之前且日期合法）。亚当先走，亚当获胜输出YES，否则输出NO。<br>方法：<br>1）找规律也可以，在(b+c)%2==0||b==9&amp;&amp;c==30||b==11&amp;&amp;c==30,的情况都输出YES，否则输出NO。abc表示年月日，<br>2）用到sg函数，找出所有日期的sg函数值，然后判断给定日常的sg函数值是否是0,0则输，不是0则赢。<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38298783">http://blog.csdn.net/a601025382s/article/details/38298783</a></p>
+<p>hdu1080 dp 难度2<br>给定两个基因，对比两个基因的相似度。即给定一个表，行列项均为ACTG-，表示基因，表内数字表示行和列对应基因的相似度，-为空。<br>先给定两个字符串表示基因a和b，长度分别为n和m，我们可以在字符串中间加入-，使得两个字符串长度相同；现在问通过加入-，最大的基因相似度是多少？<br>方法：<br>dp[i][j]表示用了a串用了前i个字符，b串用了前j个字符的情况下，得到的最大基因值。答案就是dp[n][m]。<br>由于‘-’不能和‘-’配对，所以可以得出dp公式：<br>dp[i][j]=max(dp[i-1][j-1]+get_num(a[i-1],b[j-1]),dp[i-1][j]+get_num(a[i-1,]’-‘),dp[i][j-1]+get_num(‘-‘,b[j-1]));<br>代码链接：<a href="http://blog.csdn.net/a601025382s/article/details/38299917">http://blog.csdn.net/a601025382s/article/details/38299917</a></p>
 <p>hdu1081 dp 难度2<br>求一个矩阵的最大子矩阵和。<br>方法：<br>枚举子矩阵高度k和开始行i，我们可以在O(n)时间内求得f序列，f[j]=e[i][j]+…+e[i+k-1][j]（这个预处理sum[i][j]=e[1][j]+..+e[i][j]即可），<br>之后求是f序列的最大连续子序列和了。</p>
 <p>hdu1082 堆栈 难度1<br>已知n个矩阵的行和列，给定一个序列，求根据这个序列构成的矩阵乘法顺序需要的几次矩阵元素相乘。<br>方法：<br>堆栈：当遇到矩阵时，加入栈；当遇到右括号时，将两个矩阵出栈相乘后再压入栈，同时计算乘法次数。</p>
 <p>hdu1083 最大匹配 难度1<br>有p门课程和n个学生，已知选择每门课程的学生，问是否能找到p个不同的学生，使得p门课都有一个不同的学生代表，学生代表必须选择了这门课程。<br>方法：<br>以课程和学生建二分图，求最大匹配，如果最大匹配等于p，那么就能找到要求的p个学生，输出YES；否则不能找到，输出NO。</p>
@@ -642,164 +503,10 @@
 <p>hdu2058 简单题 难度1<br>已知n和m，对于序列1,2,3…,n。找出所有和等于m的连续子序列。<br>方法：<br>起点为i,长度为k的连续序列，和为(2*i+k-1)<em>k/2=m,枚举k(1&lt;=k&lt;=sqrt(m</em>2))即可。</p>
 <p>hdu2059 dp 难度2<br>龟兔赛跑，兔子固定移动速度vr，乌龟使用电瓶车v1，蹬电瓶车v2；电瓶车每次只能开c，路上有n个供电站，位置pi，充电时间t。<br>问乌龟是否可以赢兔子。<br>方法：<br>dp[i]表示到达pi（即之后要在pi充电）的最短时间，dp[i]=min(dp[k]+路上耗时)。</p>
 <p>hdu4908</p>
-<p>hdu4910 数学 难道3<br>输入一个正整数n(n&lt;=1e18)，输出所有的i相乘并对n取余所得的值。（gcd(i,n)==1，1&lt;=i&lt;=n）<br>方法：<br>找规律：将n分解分所有质因子相乘，质因子2个数为a，其余质因子个数为b，ans=(a==0?a:a-1)+b;当ans&lt;2时结果为n-1，否则结果为1.<br>需要的知识：Miller_Rabin算法+线性筛<br>题解代码：<a target="_blank" rel="noopener" href="http://blog.csdn.net/a601025382s/article/details/38379971">http://blog.csdn.net/a601025382s/article/details/38379971</a></p>
-
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-          
-
-<div class="post-copyright">
-<ul>
-  <li class="post-copyright-author">
-      <strong>Post author:  </strong>李彬
-  </li>
-  <li class="post-copyright-link">
-      <strong>Post link: </strong>
-      <a href="http://lbamyr.top/posts/1045386572.html" title="ACM训练指导">http://lbamyr.top/posts/1045386572.html</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
-  </li>
-</ul>
-</div>
-
-          <div class="post-tags">
-              <a href="/tags/%E7%AE%97%E6%B3%95%E8%AE%AD%E7%BB%83/" rel="tag"># 算法训练</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/posts/643646675.html" rel="prev" title="日程表">
-                  <i class="fa fa-chevron-left"></i> 日程表
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/posts/1561858360.html" rel="next" title="第1日—Lgorithm-learning">
-                  第1日—Lgorithm-learning <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      const commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-</div>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">李彬</span>
-</div>
-<div class="wordcount">
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-chart-line"></i>
-    </span>
-      <span>Symbols count total: </span>
-    <span title="Symbols count total">36k</span>
-  </span>
-  <span class="post-meta-item">
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-      <span>Reading time total &asymp;</span>
-    <span title="Reading time total">33 mins.</span>
-  </span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
-  </div><script defer src="/lib/three.js"></script><script defer src="/lib/lines.js"></script><script defer src="/lib/sphere.js"></script><script defer src="/lib/waves.js"></script>
-
-    </div>
-  </footer>
-
-  
-  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-  
-
-
-
-
-<script>
-function getExif(target) {
-  const tags = {"FocalLength":"{value}mm","FNumber":"f/{value}","ExposureTime":"{value}s"};
-  EXIF.getData(target, function() {
-    const result = [];
-    for (let [key, value] of Object.entries(tags)) {
-      let data = EXIF.getTag(this, key);
-      if (key === 'ExposureTime' && data <= 0.25) {
-        data = '1/' + parseInt(1 / data);
-      }
-      if (data) result.push(value.replace('{value}', data));
-    }
-    if (result.length > 0) {
-      const box = document.createElement('div');
-      target.wrap(box);
-      box.classList.add('exif-container');
-      box.insertAdjacentHTML('beforeend', `<div class="exif-metabar"><span>${result.join(' ')}</span></div>`);
-    }
-  });
-}
-
-[...document.querySelectorAll('.post-body img')].forEach(element => {
-  if (element.complete) getExif(element);
-  // `lazyload` compatible
-  element.addEventListener('load', () => {
-    getExif(element);
-  });
-});
-</script>
-
-</body>
-</html>
+<p>hdu4910 数学 难道3<br>输入一个正整数n(n&lt;=1e18)，输出所有的i相乘并对n取余所得的值。（gcd(i,n)==1，1&lt;=i&lt;=n）<br>方法：<br>找规律：将n分解分所有质因子相乘，质因子2个数为a，其余质因子个数为b，ans=(a==0?a:a-1)+b;当ans&lt;2时结果为n-1，否则结果为1.<br>需要的知识：Miller_Rabin算法+线性筛<br>题解代码：<a href="http://blog.csdn.net/a601025382s/article/details/38379971">http://blog.csdn.net/a601025382s/article/details/38379971</a></p>
+]]></content>
+      <tags>
+        <tag>算法训练</tag>
+      </tags>
+  </entry>
+</search>
