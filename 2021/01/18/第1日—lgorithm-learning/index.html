@@ -23,17 +23,21 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.2.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
   </script>
-<meta name="description" content="这是属于我们两个的小站">
+<meta name="description" content="数据类型范围（int,long long int,用于解决数值溢出问题）有符号整数类型    类型名称 字节数 取值范围    signed char 1 -2^7(-128) ~ 2^7-1(127)   short int 或 short 2 -2^15(-32 768) ~ 2^15-1(32 767)   int 4 -2^31(-2 147 483 648) ~ 2^31-1(2 147">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第1日—Lgorithm-learning">
 <meta property="og:url" content="http://example.com/2021/01/18/%E7%AC%AC1%E6%97%A5%E2%80%94Lgorithm-learning/index.html">
 <meta property="og:site_name" content="Libin and Meiyurou&#39;s Blog">
-<meta property="og:description" content="这是属于我们两个的小站">
+<meta property="og:description" content="数据类型范围（int,long long int,用于解决数值溢出问题）有符号整数类型    类型名称 字节数 取值范围    signed char 1 -2^7(-128) ~ 2^7-1(127)   short int 或 short 2 -2^15(-32 768) ~ 2^15-1(32 767)   int 4 -2^31(-2 147 483 648) ~ 2^31-1(2 147">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1399096/201806/1399096-20180618110522708-1438710696.png">
+<meta property="og:image" content="https://images2018.cnblogs.com/blog/1399096/201806/1399096-20180618110416854-1338132341.png">
 <meta property="article:published_time" content="2021-01-18T04:57:18.000Z">
-<meta property="article:modified_time" content="2021-01-18T10:06:48.206Z">
+<meta property="article:modified_time" content="2021-01-19T04:23:52.468Z">
 <meta property="article:author" content="李彬">
+<meta property="article:tag" content="算法竞赛入门经典（刘汝佳）">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://images2018.cnblogs.com/blog/1399096/201806/1399096-20180618110522708-1438710696.png">
 
 
 <link rel="canonical" href="http://example.com/2021/01/18/%E7%AC%AC1%E6%97%A5%E2%80%94Lgorithm-learning/">
@@ -134,7 +138,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -147,6 +151,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%8C%83%E5%9B%B4%EF%BC%88int-long-long-int-%E7%94%A8%E4%BA%8E%E8%A7%A3%E5%86%B3%E6%95%B0%E5%80%BC%E6%BA%A2%E5%87%BA%E9%97%AE%E9%A2%98%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">数据类型范围（int,long long int,用于解决数值溢出问题）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%97%B6%E8%BE%93%E5%85%A5%E6%BA%A2%E5%87%BA"><span class="nav-number">1.1.</span> <span class="nav-text">计算时输入溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%97%B6%E7%BB%93%E6%9E%9C%E6%BA%A2%E5%87%BA"><span class="nav-number">1.2.</span> <span class="nav-text">计算时结果溢出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.</span> <span class="nav-text">常量定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%BF%85%E9%80%9F%E5%88%A4%E6%96%AD%E7%A8%8B%E5%BA%8F%E6%98%AF%E5%90%A6%E6%BA%A2%E5%87%BA"><span class="nav-number">1.4.</span> <span class="nav-text">如何迅速判断程序是否溢出</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E6%97%B6%E5%87%BD%E6%95%B0clock"><span class="nav-number">2.</span> <span class="nav-text">计时函数clock()</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#clock-%E8%AE%A1%E6%97%B6%E5%87%BD%E6%95%B0"><span class="nav-number">2.1.</span> <span class="nav-text">clock()计时函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#C%E8%AF%AD%E8%A8%80%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E8%A6%81%E6%B1%82"><span class="nav-number">3.</span> <span class="nav-text">C语言输出格式要求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E4%B8%AD%E7%9A%84%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%A1%86%E6%9E%B6"><span class="nav-number">4.</span> <span class="nav-text">算法竞赛中的输入输出框架</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AE%A8%E8%AE%BA"><span class="nav-number">5.</span> <span class="nav-text">文件输入输出讨论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">5.1.</span> <span class="nav-text">使用方法</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -166,7 +171,7 @@
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
@@ -233,10 +238,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2021-01-18 12:57:18 / Modified: 18:06:48" itemprop="dateCreated datePublished" datetime="2021-01-18T12:57:18+08:00">2021-01-18</time>
+      <time title="Created: 2021-01-18 12:57:18" itemprop="dateCreated datePublished" datetime="2021-01-18T12:57:18+08:00">2021-01-18</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-01-19 12:23:52" itemprop="dateModified" datetime="2021-01-19T12:23:52+08:00">2021-01-19</time>
+      </span>
 
   
 </div>
@@ -248,7 +259,140 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <h1 id="数据类型范围（int-long-long-int-用于解决数值溢出问题）"><a href="#数据类型范围（int-long-long-int-用于解决数值溢出问题）" class="headerlink" title="数据类型范围（int,long long int,用于解决数值溢出问题）"></a>数据类型范围（int,long long int,用于解决数值溢出问题）</h1><p><strong>有符号整数类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型名称</th>
+<th>字节数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>signed char</td>
+<td>1</td>
+<td>-2^7(-128) ~ 2^7-1(127)</td>
+</tr>
+<tr>
+<td>short int 或 short</td>
+<td>2</td>
+<td>-2^15(-32 768) ~ 2^15-1(32 767)</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
+</tr>
+<tr>
+<td>long int 或 long</td>
+<td>4</td>
+<td>-2^31(-2 147 483 648) ~ 2^31-1(2 147 483 647)</td>
+</tr>
+<tr>
+<td>long long int 或 long long</td>
+<td>8</td>
+<td>-2^63(-9.2233720368548e+18) ~ 2^63-1(9.2233720368548e+18)</td>
+</tr>
+</tbody></table>
+<p><strong>无符号整数类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型名称</th>
+<th>字节数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>unsigned char</td>
+<td>1</td>
+<td>0 ~ 2^8-1(255)</td>
+</tr>
+<tr>
+<td>unsigned short int 或 unsigned short</td>
+<td>2</td>
+<td>0 ~ 2^16-1(65 535)</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>4</td>
+<td>0 ~ 2^32-1(4 294 967 295)</td>
+</tr>
+<tr>
+<td>unsigned long int 或 unsigned long</td>
+<td>4</td>
+<td>0 ~ 2^32-1(4 294 967 295)</td>
+</tr>
+<tr>
+<td>unsigned long long int 或 unsigned long long</td>
+<td>8</td>
+<td>0 ~ 2^64-1(1.844674407371e+19)</td>
+</tr>
+</tbody></table>
+<p><strong>浮点类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型名称</th>
+<th>字节数</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>float</td>
+<td>4</td>
+<td>-/+3.4e38（精确到6位小数）</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>-/+1.7e308（精确到15位小数）</td>
+</tr>
+<tr>
+<td>long double</td>
+<td>12</td>
+<td>-/+1.19e4932（精确到18位小数）</td>
+</tr>
+</tbody></table>
+<p>原文请查看：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42856843/article/details/81989737">https://blog.csdn.net/weixin_42856843/article/details/81989737</a></p>
+<h2 id="计算时输入溢出"><a href="#计算时输入溢出" class="headerlink" title="计算时输入溢出"></a>计算时输入溢出</h2><p>例如：P22 例题2-2   3n+1 </p>
+<p>解题方法：将 int 改为 long long / long long int</p>
+<p>（注意：在使用long long int /long long 时输入应当改为%lld）</p>
+<h2 id="计算时结果溢出"><a href="#计算时结果溢出" class="headerlink" title="计算时结果溢出"></a>计算时结果溢出</h2><p>例如：P25 例题2-4   阶乘之和 </p>
+<p>解题方法：每步计算都对n进行取余，每步取模运算</p>
+<p>（要计算只包含<u>加法，减法和乘法的整数表达式除以正整数n的余数</u>，可以在每步计算之后<u>对n取余，结果不变</u>）</p>
+<h2 id="常量定义"><a href="#常量定义" class="headerlink" title="常量定义"></a>常量定义</h2><p><code>const int MOD = 1000000;  #引自P24 例题2-4</code></p>
+<p>改善程序的可读性，方便修改</p>
+<h2 id="如何迅速判断程序是否溢出"><a href="#如何迅速判断程序是否溢出" class="headerlink" title="如何迅速判断程序是否溢出"></a>如何迅速判断程序是否溢出</h2><p>通过“输入中间变量”法来验证</p>
+<h1 id="计时函数clock"><a href="#计时函数clock" class="headerlink" title="计时函数clock()"></a>计时函数clock()</h1><p>头文件：#include&lt;time.h&gt;</p>
+<p>输出：printf(“Time used = %.2f\n”,(double)clock() / CLOCKS_PER_SEC);</p>
+<p>说明：该函数返回程序目前为止运行的时间，这个时间除以常数CLOCKS_PER_SEC之后得到的值以“秒”为单位。</p>
+<h2 id="clock-计时函数"><a href="#clock-计时函数" class="headerlink" title="clock()计时函数"></a>clock()计时函数</h2><p>clock()是C/C++中的计时函数，而与其相关的数据类型是clock_t。在MSDN中，查得对clock函数定义如下：<br>clock_t clock(void) ;<br>简单而言，就是该程序从启动到函数调用占用CPU的时间。这个函数返回从“开启这个程序进程”到“程序中调用clock()函数”时之间的CPU时钟计时单元（clock tick）数，在MSDN中称之为挂钟时间（wal-clock）；若挂钟时间不可取，则返回-1。其中clock_t是用来保存时间的数据类型。<br>在time.h文件中，我们可以找到对clock_t()的定义：</p>
+<p>#ifndef _CLOCK_T_DEFINED</p>
+<p><em>typedef long clock_t;</em></p>
+<p><em>#define _CLOCK_T_DEFINED</em><br><em>#endif</em></p>
+<p><img src="https://images2018.cnblogs.com/blog/1399096/201806/1399096-20180618110522708-1438710696.png"></p>
+<p>很明显，clock_t是一个长整形数。在time.h文件中，还定义了一个常量CLOCKS_PER_SEC，它用来表示一秒钟会有多少个时钟计时单元，其定义如下：<br>#define CLOCKS_PER_SEC ((clock_t)1000)</p>
+<p><img src="https://images2018.cnblogs.com/blog/1399096/201806/1399096-20180618110416854-1338132341.png"></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算一段程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">8</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"> <span class="number">9</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">10</span>     &#123;</span><br><span class="line"><span class="number">11</span>         i++;</span><br><span class="line"><span class="number">12</span>     &#125;</span><br><span class="line"><span class="number">13</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">14</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is: &quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">15</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">16</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">17</span> &#125;</span><br><span class="line"><span class="number">18</span> <span class="comment">//注释在:VC++6.0中可以用CLK_TCK替换CLOCKS_PER_SEC。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="number">1</span> <span class="comment">//计算整个程序运行的时间</span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"> <span class="number">4</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">5</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 6 </span>&#123;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">12</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">13</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">14</span> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//两个写在一起</span></span><br><span class="line"> <span class="number">1</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"> <span class="number">2</span> <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"> <span class="number">3</span> <span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"> <span class="number">4</span> <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"> 5 </span>&#123;</span><br><span class="line"> <span class="number">6</span>     <span class="keyword">clock_t</span> startTime,endTime;</span><br><span class="line"> <span class="number">7</span>     <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"> <span class="number">8</span>     &#123;</span><br><span class="line"> <span class="number">9</span>         i++;</span><br><span class="line"><span class="number">10</span>     &#125;</span><br><span class="line"><span class="number">11</span>     startTime = clock();<span class="comment">//计时开始</span></span><br><span class="line"><span class="number">12</span>     <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; <span class="number">2147483640</span>; i++)</span><br><span class="line"><span class="number">13</span>     &#123;</span><br><span class="line"><span class="number">14</span>         i++;</span><br><span class="line"><span class="number">15</span>     &#125;</span><br><span class="line"><span class="number">16</span>     endTime = clock();<span class="comment">//计时结束</span></span><br><span class="line"><span class="number">17</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt;(<span class="keyword">double</span>)(endTime - startTime) / CLOCKS_PER_SEC &lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">18</span>     <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;The run time is:&quot;</span> &lt;&lt; (<span class="keyword">double</span>)clock() /CLOCKS_PER_SEC&lt;&lt; <span class="string">&quot;s&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="number">19</span>     system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"><span class="number">20</span>     <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"><span class="number">21</span> &#125;</span><br></pre></td></tr></table></figure>
+<p>部分内容引自：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/didiaodidiao/p/9194702.html">https://www.cnblogs.com/didiaodidiao/p/9194702.html</a></p>
+<h1 id="C语言输出格式要求"><a href="#C语言输出格式要求" class="headerlink" title="C语言输出格式要求"></a>C语言输出格式要求</h1><p>例如题目让输出 025，而有时候系统默认输出 25，此时我们可以用 %03d或%.3d 使 25 输出为 025。</p>
+<h1 id="算法竞赛中的输入输出框架"><a href="#算法竞赛中的输入输出框架" class="headerlink" title="算法竞赛中的输入输出框架"></a>算法竞赛中的输入输出框架</h1><p>例：P27 例题 2-5 数据统计</p>
+<p>由于整数的个数是不确定的，我们得解决这个问题。</p>
+<p>直接上代码：<code>while(scanf(&quot;%d&quot;,&amp;x) == 1)</code></p>
+<p>解释：scanf函数是有返回值的，它返回的是成功输入的变量个数，当输入结束时，scanf函数无法再次读取x，将返回0.</p>
+<p>但是细心的小伙伴运行程序后肯定会发现按下“Enter”键后未显示结果。并不是程序运行太慢，其实程序是在等待输入。scanf函数的输入格式：空格，TAB和回车符都是无关紧要的，所以按下Ente键并不意味着输入的结束。那么我们该如何告诉程序输入结束了呢？</p>
+<p>提示：在Windows下，输入完毕后先按下Enter键，再按Ctrl+Z键，最后再按Enter键，即可结束输入。在Linux下，输入完毕后按Ctrl+D键即可结束输入。</p>
+<h1 id="文件输入输出讨论"><a href="#文件输入输出讨论" class="headerlink" title="文件输入输出讨论"></a>文件输入输出讨论</h1><p>​       相信在上一节我提到的scanf函数的使用方式后，大家也会发现每次调试程序的时候并不方便，尤其是上面的例题中程序值是溢出的，那也就意味着我们会进行多次的调试。</p>
+<p>​       Good means：用文件——把输入数据保存在文件中，输出数据也保存在文件中。这样，事先把输入的数据保存在命令行中，就不必每次重新输入了；</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>最简单的方法是使用输入输出重定向，只需在main函数的入口处加入以下两条语句：</p>
+<p><code>freopen(&quot;input.txt&quot;,&quot;r&quot;,stdin);</code></p>
+<p><code>freopen(&quot;output.txt&quot;,&quot;w&quot;,stdout);</code></p>
+<p>上面两条语句使得scanf从文件input.txt读入，printf写入文件output.txt。</p>
+<p>（注意：参赛之前仔细阅读文件读写的相关规定，有的竞赛只允许访问文件，但不允许用freopen这样的重定向方式读写文件）</p>
+
     </div>
 
     
@@ -256,6 +400,9 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E5%85%A5%E9%97%A8%E7%BB%8F%E5%85%B8%EF%BC%88%E5%88%98%E6%B1%9D%E4%BD%B3%EF%BC%89/" rel="tag"># 算法竞赛入门经典（刘汝佳）</a>
+          </div>
 
         
 
